@@ -1,0 +1,162 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Permet de référencer, de retrouver et de modifier l'état de lombricomposteurs.">
+
+    <title>Lombricomposteurs d'Eisenia !</title>
+    <link id="favicon" rel="icon" href="http://lezebre.info/wp-content/uploads/2015/02/logo_eisenia-b97bb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="/client.js" defer></script>
+  </head>
+  
+  
+  <body>
+    <header>
+      <h1>
+        Les lombricomposteurs d'Eisenia
+      </h1>
+    </header>
+
+    <main> 
+      {% if id == 0 %}
+      <h2>Accueil :</h2>
+      <div class="home">
+        <form method="GET" action="/access">
+          <button type="submit" id="submitAccess">Voir un lombricomposteurs</button>
+        </form>
+        <form method="GET" action="/changeLombri">
+          <button type="submit" id="submitAccessChange">Modifier un lombricomposteur</button>
+        </form>
+        <form method="GET" action="/addLombri">
+          <button type="submit" id="submitGetAddLombri">Ajouter un lombricomposteur</button>
+        </form>
+      </div>
+      {% endif %}
+      {% if id == 1 %}
+      <div class="getLombriForm">
+        <h2>Trouver un lombricomposteur : </h2>
+        <form method="POST" action="/lombriNom">
+          <select id="select" name="nom" size="1">
+            {% for l in lombriNom%}
+            <option name="nom">{{ l.nom }}</option>
+            {% endfor %}
+          </select>
+          <button type="submit" id="submitGetLombri">Rechercher</button>
+        </form>
+      </div>
+      {% endif %}
+      {% if id == 3 %}
+      <div class="seeLombriTable">
+        {% for lo in lombri %}
+        <h2>{{lo.nom}}</h2>
+        <table id="seeLombriTable" >
+          <tr>
+            <td>Nom : {{ lo.nom }}</td>
+            <td>Adresse : {{ lo.adresse }}</td>
+            <td>Code postal : {{ lo.cp }}</td>
+          </tr>
+          <tr>
+            <td>Date d'installation : {{ lo.date_install }}</td>
+            <td>Structure : {{ lo.structure  }}</td>
+            <td>Capacité : {{ lo.capacite }}</td>
+          </tr>
+          <tr>
+            <td>Taux d'utilisation : {{ lo.taux_util }}</td>
+            <td>Tonnage traité : {{ lo.tonnage_traite }}</td>
+            <td>Contributeur : {{ lo.contributeur }}</td>
+          </tr>
+          <tr>
+            <td>Code cadenas : {{ lo.cadenas }}</td>
+            <td>Fréquence des tournées (en jours)  : {{ lo.frequence }}</td>
+            <td>Date du dernier passage : {{ lo.suivi }}</td>
+          </tr>
+          <tr>
+            <td>Remarques : {{ lo.remarque }}</td>
+            <td>Date de récolte : {{ lo.recolte }}</td>
+            <td>Contact sur place : {{ lo.contact }}</td>
+          </tr>
+          <tr>
+            <td>Responsable sur site : {{ lo.responsable_site }}</td>
+            <td>Responsable Eisenia : {{ lo.responsable_eisenia }}</td>
+            <td>Remarques liées au confinement : {{ lo.confinement}}</td>
+          </tr>
+          <tr><td></td>
+            <td><form method="GET" action="/changeLombri">
+              <button type="submit" id="submitChangeLombri">Modifier ce lombricomposteur</button>
+              </form></td>
+            <td></td></tr>
+          {% endfor %}
+        </table>
+      </div>
+      {% endif %}
+      {% if id == 2 %}
+      <div class="addLombriForm">
+        <h2>Ajouter un lombricomposteur :</h2>
+        <form method="POST" action="/addLombri">
+          Nom du lombricomposteur : <input type="text" name="nom" placeholder="ex : Nom"><br>
+          Adresse : <input type="text" name="adresse" placeholder="ex : 1, rue du lombricomposteur"><br>
+          Code postal : <input type="text" name="cp" placeholder="ex : 69000"><br>
+          Date d'installation : <input type="text" name="date_install" placeholder="ex : 01/01/2001"><br>
+          Structure : <input type="text" name="structure" placeholder="ex : Q"><br>
+          Capacité (en tonne, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="capacite" placeholder="ex : 2"><br>
+          Taux d'utilisation (en %, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="taux_util" placeholder="ex : 95"><br>
+          Tonnage traité (n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="tonnage_traite" placeholder="ex : 1.8"><br>
+          Contributeur(s) : <input type="text" name="contributeur" placeholder="ex : 10 foyers"><br>
+          Code cadenas : <input type="text" name="cadenas" placeholder="ex : 1111"><br>
+          Fréquence tournée (en jours, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="frequence" placeholder="ex : 90"><br>
+          Date du dernier passage : <input type="text" name="suivi" placeholder="ex : 01/01/2001"><br>
+          Remarques : <input type="text" name="remarque" placeholder="ex : Ce lombricomposteur est parfait !"><br>
+          Date de récolte : <input type="text" name="recolte" placeholder="ex : 01/01/2001 ou prochainement..."><br>
+          Contact sur place : <input type="text" name="contact" placeholder="ex : Mme Fandevers"><br>
+          Responsable sur site : <input type="text" name="responsable_site" placeholder="ex : Le syndic de Mme Fandevers"><br>
+          Responsable Eisenia : <input type="text" name="responsable_eisenia" placeholder="ex : Ver-onique"><br>
+          Remarques liées au confinement : <input type="text" name="confinement" placeholder="ex : tout va bien."><br>
+          <button type="submit" id="submitAddLombri">Ajouter</button>
+        </form>
+      </div>
+      {% endif %}
+      {% if id == 4 %}
+      <div class="postChangeLombriForm">
+        <h2>Modifier un lombricomposteur :</h2>
+        <form method="POST" action="/changeLombri">
+          Nom du lombricomposteur : 
+          <select id="selectNomChangeLombri" name="nom" size="1">
+            {% for l in lombriNom%}
+            <option name="nom">{{ l.nom }}</option>
+            {% endfor %}
+          </select><br>
+          Adresse : <input type="text" name="adresse" placeholder="ex : 1, rue du lombricomposteur"><br>
+          Code postal : <input type="text" name="cp" placeholder="ex : 69000"><br>
+          Date d'installation : <input type="text" name="date_install" placeholder="ex : 01/01/2001"><br>
+          Structure : <input type="text" name="structure" placeholder="ex : Q"><br>
+          Capacité (en tonne, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="capacite" placeholder="ex : 2"><br>
+          Taux d'utilisation (en %, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="taux_util" placeholder="ex : 95"><br>
+          Tonnage traité (n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="tonnage_traite" placeholder="ex : 1.8"><br>
+          Contributeur(s) : <input type="text" name="contributeur" placeholder="ex : 10 foyers"><br>
+          Code cadenas : <input type="text" name="cadenas" placeholder="ex : 1111"><br>
+          Fréquence tournée (en jours, n'entrez que la valeur chiffrée, pas d'unité) : <input type="text" name="frequence" placeholder="ex : 90"><br>
+          Date du dernier passage : <input type="text" name="suivi" placeholder="ex : 01/01/2001"><br>
+          Remarques : <input type="text" name="remarque" placeholder="ex : Ce lombricomposteur est parfait !"><br>
+          Date de récolte : <input type="text" name="recolte" placeholder="ex : 01/01/2001 ou prochainement..."><br>
+          Contact sur place : <input type="text" name="contact" placeholder="ex : Mme Fandevers"><br>
+          Responsable sur site : <input type="text" name="responsable_site" placeholder="ex : Le syndic de Mme Fandevers"><br>
+          Responsable Eisenia : <input type="text" name="responsable_eisenia" placeholder="ex : Ver-onique"><br>
+          Remarques liées au confinement : <input type="text" name="confinement" placeholder="ex : tout va bien."><br>
+          <button type="submit" id="submitPostChangeLombri">Modifier</button>
+        </form>
+      </div>
+      {% endif %}
+    </main>
+
+    <footer>
+      Code source <a id="codesource" href="https://glitch.com/edit/#!/eiseni-lombri">ici</a>
+    </footer>
+
+  </body>
+</html>
