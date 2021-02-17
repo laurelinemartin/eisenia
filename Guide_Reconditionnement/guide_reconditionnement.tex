@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\title{Petit guide du parfait reconditionnement}
+\author{Association Eisenia}
+\date{Janvier 2021}
+
+\begin{document}
+\maketitle
+\begin{figure}
+\centering\includegraphics[scale=0.5]{include/logo.jpg}
+\end{figure}
+
+\newpage
+\renewcommand{\contentsname}{Table des matières}
+\tableofcontents
+
+\newpage
+\section{Introduction}
+
+\section{Pré-boot Linux Mint}
+    \subsection{Vérifications}
+        Avant de commencer, il faut vérifier que tous les composants sont bien présents.
+        Parfois, nous récupérons des ordinateurs avec des pièces manquantes.
+        \begin{enumerate}
+            \item Une carte mère ;
+            \item Une alimentation ;
+            \item Un (ou 2) emplacement pour disque dur (avec ou sans disque dur) ;
+            \item Un (ou plusieurs) emplacement pour les barrettes RAM ;
+            \item Un emplacement pour la pile BIOS ;
+            \item Un (ou plusieurs) connecteur(s) PCI (pour carte graphique, carte son, carte WIFI, etc.) ;
+            \item Un connecteur pour le processeur (avec ou sans le processeur).
+        \end{enumerate}
+        \textit{insérer une petite image là}.
+    \subsection{Changement de la RAM}
+        La RAM, c'est la mémoire vive de l'ordinateur. Ce n'est pas la mémoire permanente. Elle permet de stocker les informations des applications ouvertes à l'instant T mais aussi des informations essentielles pour le bon fonctionnement du système.\newline
+        Souvent, la RAM des PCs que nous récupérons est insuffisante et/ou endommagée. Nous essayons de mettre aux PCs 4GB de RAM.
+        \subsubsection{Recommandations choix de barrette RAM}
+            \begin{itemize}
+                \item Il faut que la somme de la capacité des barrettes soit égale à 2GB ou 4GB ou 8GB, 16GB ou 32GB ;
+                \item Il est préférable d’installer des barrettes provenant du même fabricant ;
+                \item Il est préférable d’installer des barrettes de même capacité mémoire.
+            \end{itemize}
+        \subsubsection{Montage des barettes de RAM}
+            \begin{enumerate}
+                \item Débrancher le PC de la prise secteur ;
+                \item Ouvrir le PC ;
+                \item Repérer les emplacements pour les barettes de RAM ;
+                \item Ouvrir les emplacements à l’aide des petits fermoirs qui se trouvent de chaque côtés des barrettes ;
+                \item Récupérer les anciennes barrettes et repérer le type de DDR/PC (1 ou 2 ou 3 ou 4) ;
+                \item Installer les nouvelles barrettes en faisant attention au sens (l’encoche de la barrette doit entrer dans la petite butée de l’emplacement) :
+                \begin{itemize}
+                    \item Insérer d’abord un côté de la barrette jusqu’à entendre un clac, puis l’autre côté. Une fois montée, la barrette ne doit plus pouvoir bouger de son emplacement.
+                \end{itemize}
+            \end{enumerate}
+    \subsection{Changement de la pile}\label{sec:changementpile}
+        La plus part du temps, il s'agit de pile bouton lithium CR2032.
+        \begin{enumerate}
+            \item Débrancher le PC ;
+            \item Ouvrir le PC ;
+            \item Repérer sur la carte mère l'emplacement de la pile. Elle est en générale plaquée sur la carte mère à l'horizontale maintenue par un socle en plastique ;
+            \item Utiliser la petite languette en métal sur le bord du support pour déclipser la pile ;
+            \item Retirer l'ancienne pile et insérer la nouvelle délicatement (le "+" vers le haut).
+        \end{enumerate}
+
+\section{Boot Linux Mint}
+    \subsection{Messages d'erreurs}
+        \subsubsection{"Alert! System battery voltage is low"}
+            Dans ce cas, c'est la pile qui est en cause. La pile permet de sauvegarder des informations comme les paramètres BIOS, l'heure système, etc. Lorsque ce message s'affiche il faut changer la pile. Voir la Section \ref{sec:changementpile}. Changer la pile.
+        \subsubsection{“Floppy diskette seek failure"}
+            Ce message indique que le lecteur disquette est manquant. Comme nous ne comptons pas utiliser de lecteur disquette, nous allons demander au système d’ignorer ce lecteur.
+            \begin{enumerate}
+                \item Démarrer l’ordinateur en appuyer sur la touche qui ouvre le BIOS (F1 ou F2 ou F9 ou F12 selon les modèles) avant que Linux démarre ;
+                \item Une fois dans le BIOS, aller dans l’onglet Drivers > Diskette Driver, appuyer sur “Entrer” et sélectionner “No” ;
+                \item Appuyer sur "Echap", choisir l'option "Save/Exit".
+            \end{enumerate}
+    \subsection{Utilisation de la clé boot}
+        Pour installer Linux sur le PC, nous allons ici utiliser une “clé de bootage”. C’est une version très simple et rapide de faire les choses.
+        \begin{enumerate}
+            \item Démarrer le PC tout en appuyant sur la touche ; permettant d’ouvrir la sélection du driver de démarrage (souvent F12) ;
+            \item Sélectionner USB Driver ;
+        \end{enumerate}
+        Ensuite la démarche est guidée il suffit de choisir les options souhaitées :
+        \begin{itemize}
+            \item Langue du système = Français ;
+            \item Cocher "installer les codecs multimédias"
+            \item “Effacer le disque et installer Linux Mint” permet d’effacer toutes les données présentent sur le disque (état de sortie d’usine) ;
+            \item Fuseau horaire = GMT +1 (Europe centrale) ;
+        \end{itemize} 
+
+\section{Post boot Linux Mint}
+    \subsection{Réglage de l’heure}
+        L’heure se synchronise automatiquement dès que le PC est connecté à internet.
+    \subsection{Paramétrage de Firefox}
+        \subsubsection{Paramétrage de la langue de Firefox}
+            \begin{enumerate}
+                \item Cliquer en haut à droite sur les 3 barres horizontales ;
+                \item Cliquer sur Preferences ;
+                \item Dans l’onglet “General”, se rendre à la section “Language”;
+                \item Cliquer sur “Select an other language” ;
+                \item Dans la boîte de dialogue, cliquer sur le petit menu déroulant et choisir “French” ou “Fançais” ;
+                \item Cliquer sur “Add” ;
+                \item Vérifier que “Français” est bien sélectionné dans la liste puis cliquer sur “OK” ;
+                \item Redémarrer Firefox (l’option est proposé juste après la fermeture de la boîte de dialogue) ;
+            \end{enumerate}
+        \subsubsection{Paramétrage de la page d'accueil par défaut}
+            \begin{enumerate}
+                \item Dans l’onglet Accueil, se rendre à la section “Nouvelles fenêtres et onglets” ;
+                \item A la partie “Page d’accueil” choisir “URLs” et taper l’URL qui convient, par exemple  \href{https://search.lilo.org/}{https://search.lilo.org/} ;
+            \end{enumerate}
+        \subsubsection{Paramétrage pour Lilo}
+            \begin{enumerate}
+                \item Aller sur \href{https://lilo.org/}{https://lilo.org/} ;
+                \item Cliquer sur “Ajouter Lilo à Firefox” ;
+                \item Cliquer sur “Oui” puis sur “J’ai compris”;
+                \item Faire 2 recherches différentes dans Lilo ;
+                \item A la 2e recherche, une petite goutte d’eau avec un “1” à côté apparaît en haut à droite, cliquer dessus puis sur “Soutenir un projet” ;
+                \item Dans la barre de recherche “recherche le nom de votre projet…”, taper “Eisenia” ;
+                \item Cliquer sur “Eisenia, l’association de lombri…” ;
+                \item Cliquer sur “Donner automatiquement vos gouttes d’eau à ce projet” puis sur “OK”.
+            \end{enumerate}
+    \subsection{Mises à jour}
+        \subsubsection{Vérifier si des mises à jour sont disponibles}
+            Les mises à jour sont importantes et il faut les faire aussi fréquemment que possible. Ce sont des corrections/des améliorations apportées aux logiciels pour résoudre des bogues, des problèmes de performances ou tout simplement ajouter de nouvelles fonctionnalités.\newline
+            Il faut tout d'abord vérifier que des mises à jour sont disponible pour l'ordinateur, pour cela :
+            \begin{enumerate}
+                \item S'assurer d'être bien connecté à internet ;
+                \item Sur la barre de tâche, à droite, passer la souris sur le petit bouclier, il indique si des mises à jour sont à faire.
+            \end{enumerate}
+        \subsubsection{Installer les mises à jour}
+            \begin{enumerate}
+                \item Si des mises à jour sont disponibles : cliquer sur bouclier ;
+                \item Une fenêtre s’ouvre, cliquez sur “Tout sélectionner” pour faire toutes les mises à jour en une fois puis sur “Installer les mises à jour” (si besoin entrer le mot de passe qui est “utilisateur”).
+            \end{enumerate}
+        \subsubsection{Mettre à jour les paquets d’installation (optionnel)}
+        Ces commandes vont permettre de mettre à jour les paquets utilisés pour installer des logiciels, etc. Ce sont des commandes qui sont font à partir de l'invit de commande (Terminal). Il est préférables de faire ces commandes.
+            \begin{enumerate}
+                \item Dans un terminal, entrer la commande “sudo apt update” ;
+                \item  Si nécessaire entrer le mot de passe.
+                \item Une fois l’opération terminée, entrer “sudo apt upgrade”;
+            \end{enumerate}
+\end{document}
