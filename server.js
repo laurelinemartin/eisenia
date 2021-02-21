@@ -129,10 +129,8 @@ app.get('/changeLombri', async function(req, res){
 app.post('/changeLombri', async function(req, res){
   id = 4;
   try{
-      await knex.raw('UPDATE Lombricomposteur SET contact = ?, cadenas = ?, frequence = ?, suivi = ?, remarque = ?, responsable_site = ?, responsable_eisenia = ?, confinement = ? WHERE nom = ?',
-                    [req.body.contact, req.body.cadenas, req.body.frequence, req.body.suivi, req.body.remarque, 
-                     req.body.responsable_site, req.body.responsable_eisenia,
-                     req.body.confinement, req.body.nom]);
+      await knex.raw('UPDATE Lombricomposteur SET cadenas = ? WHERE nom = ?',
+                    [req.body.cadenas, req.body.nom]);
     }catch(error){
       console.error(error);
       res.redirect('/');
