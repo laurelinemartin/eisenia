@@ -65,7 +65,8 @@ app.get('/access', async function(req,res){
   id = 1;
   var lombriNom = '';
   lombriNom = await knex.select('nom')
-                        .from('Lombricomposteur');
+                        .from('Lombricomposteur')
+                        .orderBy('cp');
   res.render(__dirname+'/views/lombrideisenia.html', {"lombriNom" : lombriNom,
                                                       "id" : id});
   console.log(req.body);
@@ -120,25 +121,23 @@ app.get('/changeLombri', async function(req, res){
   id = 4; 
   var lombriNom = '';
   lombriNom = await knex.select('nom')
-                        .from('Lombricomposteur');
+                        .from('Lombricomposteur')
+                        .orderBy('cp');
   res.render(__dirname+'/views/lombrideisenia.html', {"lombriNom" : lombriNom,
                                                       "id" : id});
 })
 app.post('/changeLombri', async function(req, res){
   id = 4;
   try{
-      await knex.raw('UPDATE Lombricomposteur SET adresse = ?, cp = ?, date_install = ?, structure = ?, capacite = ?, taux_util = ?, tonnage_traite = ?, contributeur = ?, cadenas = ?, frequence = ?, suivi = ?, remarque = ?, recolte = ?, contact = ?, responsable_site = ?, responsable_eisenia = ?, confinement = ? WHERE nom = ?',
-                    [req.body.adresse, req.body.cp, req.body.date_install, 
-                     req.body.structure, req.body.capacite, req.body.taux_util,
-                     req.body.tonnage_traite, req.body.contributeur, req.body.cadenas,
-                     req.body.frequence, req.body.suivi, req.body.remarque, req.body.recolte,
-                     req.body.contact, req.body.responsable_site, req.body.responsable_eisenia,
+      await knex.raw('UPDATE Lombricomposteur SET contact = ?, cadenas = ?, frequence = ?, suivi = ?, remarque = ?, responsable_site = ?, responsable_eisenia = ?, confinement = ? WHERE nom = ?',
+                    [req.body.contact, req.body.cadenas, req.body.frequence, req.body.suivi, req.body.remarque, 
+                     req.body.responsable_site, req.body.responsable_eisenia,
                      req.body.confinement, req.body.nom]);
     }catch(error){
       console.error(error);
       res.redirect('/');
     }   
-    console.log('Lombricomposteur ajouté !');
+    console.log('Lombricomposteur modifié !');
     res.redirect('/');
 })
 //********************************************************************************************************************************

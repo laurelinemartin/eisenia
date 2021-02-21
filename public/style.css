@@ -32,11 +32,12 @@ p {
 form {
   margin-bottom: 25px;
   padding: 15px;
+  color: white;
   background-color: green;
   display: inline-block;
   width: 100%;
   max-width: 340px;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 input {
