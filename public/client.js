@@ -39,6 +39,36 @@ fetch("/getLombris", {})
 //span.appendChild(form);
 //element.appendChild(span);
 //
+function mainMenu(){
+  var element = document.querySelector("menu");
+  var menu = document.createElement("menu");
+      menu.innerHTML='';
+      menu.type="toolbar";
+      menu.label="mainMenu";
+  var btn = document.createElement("button");
+      btn.innerHTML='';
+      btn.type="submit";
+      btn.method="GET";
+      btn.action="/access";
+  var btn = document.createElement("button");
+      btn.innerHTML='';
+      btn.type="submit";
+      btn.method="GET";
+      btn.action="/addLombri";
+  var btn = document.createElement("button");
+      btn.innerHTML='';
+      btn.type="submit";
+      btn.method="GET";
+      btn.action="/changeLombri";
+  var btn = document.createElement("button");
+      btn.innerHTML='';
+      btn.type="submit";
+      btn.method="GET";
+      btn.action="/alertLombri";
+  menu.appendChild(btn);
+  element.appendChild(menu);
+}
+//mainMenu();
 
 function addLombriForm(){
   var element = document.querySelector("form");

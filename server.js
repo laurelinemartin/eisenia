@@ -23,9 +23,16 @@ const session = require('express-session');
 // const sqlite3 = require("sqlite3").verbose();
 // const db = new sqlite3.Database(dbFile);
 var id = 0;
+var current_date = Date.now();
+function dayDiff(d1)
+{
+  d1 = d1.getTime() / 86400000;
+  var d2 = Date.now() / 86400000;
+  return new Number(d2 - d1).toFixed(0);
+}
+
+
 ////////////////////////////////////////////////
-
-
 app.use('/s', express.static('views'))
   .use(bodyParser.urlencoded({ extended: false }))
   .engine('html', consolidate.nunjucks)
@@ -129,14 +136,25 @@ app.get('/changeLombri', async function(req, res){
 app.post('/changeLombri', async function(req, res){
   id = 4;
   try{
-      await knex.raw('UPDATE Lombricomposteur SET cadenas = ? WHERE nom = ?',
-                    [req.body.cadenas, req.body.nom]);
+      await knex.raw('UPDATE Lombricomposteur SET suivi = ? WHERE nom = ?',
+                    [req.body.suivi,  req.body.nom]);
     }catch(error){
       console.error(error);
       res.redirect('/');
     }   
     console.log('Lombricomposteur modifié !');
     res.redirect('/');
+})
+app.get('/alertLombri', async function(req, res){
+  id = 5;
+  try{
+    var alertLombri = await knex.raw('SELECT nom, (CAST ((julianday()-julianday(suivi)) AS INTEGER)) AS date, frequence FROM Lombricomposteur WHERE date > frequence');
+    res.render(__dirname+'/views/lombrideisenia.html', {"lombri" : alertLombri,
+                                                      "id" : id});
+  }catch(error){
+    console.error(error);
+    res.redirect('/');
+  }
 })
 //********************************************************************************************************************************
 
