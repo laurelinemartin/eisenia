@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{hyperref}
 %\usepackage{wrapfig}
 
 \title{Petit guide d'utilisation de Linux Mint}
@@ -295,14 +296,54 @@ Dans ce chapitre, nous intéresser aux bzses du système d'exploitation Linux Mi
 		 	\end{itemize}
 		 \end{enumerate}
 
-\chapter{Logiciels}
-Dans ce chapitre, nous allons aborder quelques logiciels libres de base pour bien démarrer avec son ordinateur.
-Nous présenterons tout d'abord le pack LibreOffice permettant d'éditer une multitude de documents différents.
-Puis nous présentenrons le navigateur web Firefox de Mozila.
-Enfin, nous présenterons le lecteur multimédia VLC.
-La liste de logiciels libres que nous vous proposons ici est non-exhaustive.
-Il existe beaucoup d'autres logiciels très pratique selon vos besoins.\
-C'est pour quoi, nous expliquons dans la dernière section de ce chapitre comment installer de nouveaux logiciels sur votre ordinateurs.
+\chapter{Logiciels et applications}\label{sec:logiciels}
+Sous Linux Mint, l'installation de logiciels et d'applications se fait uniquement via un portail particulier -la Logithèque- ou par lignes de commande.
+La Logithèqe est le portail qui vous permet de rechercher et d'installer des applications et des logiciels directement sur votre ordinateur.\par
+Dans ce chapitre, nous expliquons comment utiliser la logithèque.
+Nous détaillons également quelques logiciels libres indispensables pour bien démarrer votre expérience numérique.
+Seuls quelques logiciels seront détaillés dans ce chapitre, nous vous invitons à explorer la logithèque ou de consulter des sites tels que \href{https://framalibre.org/}{https://framalibre.org/} (dernière consultation le 31/03/2021) qui pourront vous inspirer et vous aider à trouver le logiciel libre de vos rêves.
+\section{La Logithèque de Linux Mint}\label{sec:logitheque}
+	La Logithèque présente sur votre ordinateur se présente comme une immense bibliothèques d'applications.
+	Elle sera votre meilleure alliée pour rechercher et explorer rapidement et très simplement de nouveau logiciels à intégrer à votre ordinateur.\par
+	Pour accéder à la Logithèque :
+	\begin{enumerate}
+		\item Ouvrez le Menu;
+		\item Cliquez sur la section "\texttt{Administration}" puis descendez jusqu'à "\texttt{Logithèque}".
+	\end{enumerate}\par
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.8\textwidth]{include/logitheque.png}
+		\caption{Accueil de la Logithèque}
+		\label{fig:logitheque}
+	\end{figure}\par
+	Une fois sur l'écran d'accueil, vous pouvez rechercher un logiciel de différentes manières :
+	\begin{enumerate}
+		\item Tapez dans la barre de recherche placée en haut à droite de la fenêtre si vous connaissez le nom du logiciel que vous chercher ou vous souhaitez effectuer une recherche par mots-clé;
+		\item Découvrez un logiciel suggéré par page d'accueil;
+		\item Cherchez sur la catégorie que vous souhaitez explorer.
+	\end{enumerate}
+	\subsection{Un exemple de recherche dans la logithèque}\label{sec:exlogitheque}
+		Voici un petit exemple simple pour rechercher et installer facilement un logiciel ou une application via la logithèque.\par
+		Pour cela, nous allons prendre l'exemple d'une application nous permettant d'obtenir la météo.\par
+		Une fois sur l'écran d'accueil de la Logithèque, nous tapons "\textit{météo}" dans la barre de recherche située en haut à droite de la fenêtre puis nous appuyons sur la touche "\texttt{Entrée}".
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[width=.8\textwidth]{include/meteo1.png}
+%			\caption{Recherche du mot-clé "\textit{météo}" dans la barre de recherche de la logithèque}
+%			\label{fig:meteo1}
+%		\end{figure}\par
+		Une liste d'applications s'affiche alors. 
+		Nous en choisissons une parmi cette liste et cliquons dessus.
+%		\begin{figure}
+%		\includegraphcis[width=.8\textwidth]{include/meteo2.png}
+%		\caption{Liste de résultat pour la recherche "\textit{météo}"}
+%		\label{fig:meteo2}
+%		\end{figure}\par
+		Le détail pour cette application s'affiche.
+		On y retrouve une description, des captures d'écrans et les avis d'autres utilisateurs.
+		Nous cliquons sur "\texttt{Installation}"
+		\textit{faire une subfigure avec meteo4 et meteo5}
+		
 \section{Les logiciels indispensables pour bien démarrer}
 	\subsection{Le pack LibreOffice}
 		Le pack LibreOffice est indispensable lorsque l'on souhaite rédiger des documents de toute sorte.\newline
@@ -337,9 +378,6 @@ C'est pour quoi, nous expliquons dans la dernière section de ce chapitre commen
 		Ce navigateur permet également de bloquer les traqueurs publicitaires.
 		...
 	\subsection{VLC}
-
-\section{Installer de nouveaux logiciels}
-	\textit{Ici, description de l'outil logithèque.}
 
 \chapter{Internet}
 Maintenant que nous nous sommes familiarisés avec cet environnement, il est temps d'aller surfer sur le web.\newline
