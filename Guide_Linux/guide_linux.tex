@@ -40,6 +40,7 @@ Nous aborderons aussi d'autres thématiques comme l'utilisation d'Internet et le
 
 \chapter{Environnement Linux Mint}
 \begin{minipage}[c]{.25\textwidth}
+	\centering
 	\includegraphics[width=.85\textwidth]{include/lm_logo.png}
 %	\caption{Caption1}
 %	\label{fig:wrapfig}
@@ -353,6 +354,7 @@ Bien d'autres logiciels seront utiles en plus de ceux présentez ici.
 N'hésitez pas à explorer la logithèque.
 	\subsection{Le pack LibreOffice}\label{sec:libreoffice}
 		\begin{minipage}[c]{0.3\textwidth}
+			\centering
 			\includegraphics[width=\textwidth]{include/lo_logo.png}
 		\end{minipage}
 		\begin{minipage}[c]{.7\textwidth}
@@ -395,6 +397,7 @@ N'hésitez pas à explorer la logithèque.
 			C'est également un navigateur libre.
 		\end{minipage}
 		\begin{minipage}[c]{.3\textwidth}
+			\centering
 			\includegraphics[width=\textwidth]{include/mf_logo.jpg}
 		\end{minipage}\par
 		Pour un navigateur web, cela garanti notamment une certaine sécurité sur nos données personnelles.
@@ -537,75 +540,134 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		Félicitations, vous êtes connecté à Internet !
 \section{Utiliser le navigateur Mozilla Firefox}\label{sec:utiliserfirefox}
 	Nous avons vu dans la Section \ref{sec:deffirefox} de nombreuses informations relatives à ce navigateur libre.
-	Si ce n'est pas déjà fait, je vous encourage à lire cette section.\par
+	Si ce n'est pas déjà fait, nous vous encourageons à lire cette section pour prendre connaissance des fonctionnalités présentées par Firefox.\par
 	Ici, nous allons voir comment utiliser le navigateur Mozilla Firefox.\par
 	Pour commencer, ouvrez le navigateur web.
-	Pour cela, vous pouvez cliquez sur l'icône "Firefox" qui se trouve sur votre barre des tâche à droite de l'îcône du menu démarrer 
-		\includegraphics{include/icn_firefox.png}.
+	Pour cela, vous pouvez cliquez sur l'icône "Firefox" qui se trouve sur votre barre des tâche à droite de l'îcône du menu démarrer .
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{include/mf_barre.png}
+		\caption{Localisation du navigateur web Mozilla Firefox sur la barre des tâches}
+		\label{fig:mf_barre}
+	\end{figure}\par
 	Une nouvelle fenêtre s'ouvre et affiche votre page d'accueil.
-\section{Utiliser le moteur de recherche Lilo}
-	Lilo est un moteur de recherche. 
-	C'est-à-dire qu'il permet, grâce à des mots-clés, de faire des recherches.
-	A partir de ces mots-clés, le moteur de recherche va récupérer les pages web les plus pertinentes et les lister.\par
-	Lilo est un moteur de rechcerche français. L'avantage de Lilo est triple :
-	\begin{itemize}
-		\item Lilo n'accepte aucun traqueur.\newline
-				Lorsque vous faites une recherche, Lilo ne transmet pas ces données à des comtenus publicitaires ou autres.
-		\item Lilo concerve les données personnelles privées.\newline
-				Les données personnelles que vous transmettez à Lilo (données de compte, adresse IP, etc.) sont chiffrées et utilisées dans l'unique but de faire fonctionner correctement le moteur de recherche.
-		\item Lilo permet de soutenir des projets.\newline
-				En faisant vos recherches, vous pouvez choisir d'attribuer des "gouttes d'eau" à un ou plusieurs projets solidaires de votre choix.
-				Ces gouttes d'eau sont permettent d'aider à financer ces projets.
-	\end{itemize}\par
-	Lilo se présente de la manière suivante :
+	Ici, notre page d'accueil est le moteur de recherche Lilo (voir la Section \ref{sec:ilo}).
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\textwidth]{include/accueil_mf.png}
+		\caption{Ouverture de Mozilla Firefox}
+		\label{fig:accueil_mf}
+	\end{figure}
 	\begin{enumerate}
-		\item La barre de rechercher.
-				Tapez les mots-clés pour votre recherche puis appuyer sur la touche \texttt{Entrée}.
-		\item Le compteur de gouttes d'eau.
-				Visualisez combien de gouttes d'eau vous avez collecté depuis que vous utilisés Lilo.
-		\item Le compte Lilo.
-				Inscrivez-vous / connectez-vous à votre compte Lilo.
-				Ce compte est facultatif.
-				Pas besoin d'avoir un compte Lilo pour faire des recherches.
-		\item Le menu.
-		\begin{enumerate}
-			\item \texttt{Accueil} vous permet de revenir à la page de recherche de Lilo.
-			\item \texttt{Soutenir un projet} vous permet de sélectionner le (ou les) projet(s) de votre choix en donner vos gouttes d'eau.
-			\item \texttt{Proposer un projet} permet à des structures de soumettre leur pojet solidaire à Lilo afin que les internautes puissent leur donner des gouttes d'eau.
-			\item \texttt{Vie privée} renvoie vers un descriptif de la gestion des données personnelle par Lilo.
-			\item \texttt{FAQ} renvoie vers une page de Questions/Réponses fréquentes.
-			\item \texttt{Lilo} renvoie vers une page décrivant le fonctionnement de Lilo.
-			\item \texttt{Personnaliser} vous permet d'effectuer des réglages par rapport au moteur de recherche.
-			\item \texttt{Mon compte} vous permet de vous connecter ou de vous créer un compte Lilo.
-			\item \texttt{Use Lilo in English} vous permet de mettre Lilo en anglais.
-			\item Ce compteur affiche le nombre d'euros collectés et reverser par tous les utilisateurs à des projets solidaires.
-		\end{enumerate}
-		\item Les favoris.
-				Accédez plus rapidement à des pages web en les ajoutant à vos favoris LIlo.
-				Il s'agit d'une option à ajouter pour qu'elle apparaisse sur la page d'accueil de Lilo.
-		\item Le fil d'actualité.
-				En descendant sur cette page, vous pouvez consulter les actualités.
-				Il s'agit d'une option à ajouter pour qu'elle apparaisse sur la page d'accueil de Lilo.
+		\item Les onglets.\newline
+				Vous pouvez ouvrir plusieurs pages dans une seule fênetre de navigation.
+				Ceci vous permet de vous retrouver plus facilement dans votre espace.
+				Pour ouvrir un nouvel onglet, cliquez sur le "+";
+		\item Ce bouton vous permet de revenir à la page précédente.;
+		\item Ce bouton vous permet de revenir à la page suivante (si vous avex cliquez sur le bouton \texttt{2});
+		\item Ce bouton vous permet de "rafraîchir la page.
+				La page web en cours d'utilisation se recharge et se relance;
+		\item Ce bouton vous permet de revenir à l'écran d'accueil;
+		\item Cette barre affiche l'adresse URL sur laquelle vous vous trouvez actuellement.
+				Cette barre vous permet également d'effectuer une recherche en entrant un ou des mots-clé ou directement une adresse URL.
+				Cliquer sur l'étoile à droite de cette barre vous permet de "marquer la page en cours".
+				Cela peut vous être utile lorsque qu'il s'agit d'une page que vous consultez souvent.
+				Il vous suffit de vous rendre dans vos marque-pages pour la retrouver au lieu d'effectuer une recherche à chaque fois.
+		\item Ce bouton vous permet d'afficher votre historique des pages web que vous avez parcouru mais aussi vos marque-pages, vos téléchargements, vos captures d'écrans, etc.;
+		\item Ce bouton vous permet d'afficher tous vos marque-pages;
+		\item Ce bouton vous permet d'accéder à différents paramètres du navigateur.
 	\end{enumerate}
-	\section{Effectuer sa première recherche sur Internet}
-	Pour effectuer une recherche, rien de plus simple ! 
-	Rendez-vous sur votre moteur de recherche, nous prendrons comme exemple Lilo.
-	Une fois sur la page d'accueil de Lilo, tapez les mots-clés pour votre recherche.
-	Par exemple "Pastèque".
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.3]{include/pasteque1.png}
-		\label{fig:pasteque1}
-		\caption{Recherche du mot "Pastèque" dans Lilo}
-	\end{figure}
-	Appuyer en suite sur la touche \texttt{Entrée} de votre clavier.\par
-	Et voilà, le moteur de recherche vous affiche une liste de page web en lien avec le mot clé "Pastèque".
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.3]{include/pasteque2.png}
-		\label{fig:pasteque2}
-		\caption{Liste des résultats pour le mot "Pastèque" dans Lilo}
-	\end{figure}
+\section{Utiliser le moteur de recherche Lilo}\label{sec:lilo}
+	Pour effectuer vos recherches sur internet, vous aurez besoin d'un moteur de recherche.
+	Un moteur de recherche permet, grâce à des mots-clés, de faire des recherches sur le web.
+	A partir de ces mots-clés, le moteur de recherche récupère les pages web les plus pertinentes et en faire une liste.
+	Le moteur de recherche est donc un allié indispensable pour effectuer vos recherches.\par
+	Dans cette section, nous vous présentons le moteur de recherches Lilo.
+	\subsection{Présentation de Lilo}
+		\begin{minipage}[c]{.6\textwidth}
+		Lilo est un moteur de recherche solidaire.
+		Il permet de soutenir des projets à caractères sociaux et/ou environnementaux.
+		En faisant vos recherches, vous pouvez choisir d'attribuer des "gouttes d'eau" à un ou plusieurs projets solidaires de votre choix.
+		Ces gouttes d'eau
+		\end{minipage}
+		\begin{minipage}[c]{.4\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{include/lilo_logo.png}
+		\end{minipage}
+		sont utilisées pour aider à financer ces projets.
+		Plus vous faites de recherches, plus des annonceurs s'affichent dans vos résultats.
+		À chaque apparition, les annonceurs reversent quelques centimes à Lilo.
+		cet argent est reversé au projet que vous avez sélectionné.\par
+		Lilo n'accepte aucun traqueur.
+		Lorsque vous faites une recherche, Lilo ne transmet pas ces données à des comtenus publicitaires ou autres.\par
+		Lilo concerve les données personnelles privées.
+		Les données personnelles que vous transmettez à Lilo (données de compte, adresse IP, etc.) sont chiffrées et utilisées dans l'unique but de faire fonctionner correctement le moteur de recherche.\par
+		Lilo se présente de la manière suivante :
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=.8\textwidth]{include/lilo.png}
+			\caption{Le moteur de recherche Lilo}
+			\label{fig:lilo}
+		\end{figure}
+		\begin{enumerate}
+			\item La barre de rechercher.
+					Tapez les mots-clés pour votre recherche puis appuyer sur la touche \texttt{Entrée};
+			\item Le compteur de gouttes d'eau.
+					Visualisez combien de gouttes d'eau vous avez collecté depuis que vous utilisés Lilo;
+			\item Le compte Lilo.
+					Inscrivez-vous / connectez-vous à votre compte Lilo.
+					Ce compte est facultatif;
+					Pas besoin d'avoir un compte Lilo pour faire des recherches.
+			\item L'accueil.
+					Revenez sur la page d'accueil de recherche de Lilo;
+			\item Le menu :\newline
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=\textwidth]{include/lilo_menu.png}
+				\caption{Lilo - Le menu}
+				\label{fig:lilomenu}
+			\end{figure}
+			\begin{enumerate}
+				\item \texttt{Accueil} vous permet de revenir à la page de recherche de Lilo.
+				\item \texttt{Soutenir un projet} vous permet de sélectionner le (ou les) projet(s) de votre choix en donner vos gouttes d'eau.
+				\item \texttt{Proposer un projet} permet à des structures de soumettre leur pojet solidaire à Lilo afin que les internautes puissent leur donner des gouttes d'eau.
+				\item \texttt{Vie privée} renvoie vers un descriptif de la gestion des données personnelle par Lilo.
+				\item \texttt{FAQ} renvoie vers une page de Questions/Réponses fréquentes.
+				\item \texttt{Lilo} renvoie vers une page décrivant le fonctionnement de Lilo.
+				\item \texttt{Personnaliser} vous permet d'effectuer des réglages par rapport au moteur de recherche.
+				\item \texttt{Mon compte} vous permet de vous connecter ou de vous créer un compte Lilo.
+				\item \texttt{Use Lilo in English} vous permet de mettre Lilo en anglais.
+				\item Ce compteur affiche le nombre d'euros collectés et reverser par tous les utilisateurs à des projets solidaires.
+			\end{enumerate}
+		\end{enumerate}
+		Si vous le désirez vous pouvez afficher des options dans votre page d'accueil Lilo.
+		Elles apparaîtront sous la barre de recherche (\texttt{1}).
+		Vous pouvez ajouter à votre page d'accueil :
+		\begin{itemize}
+			\item Vos favoris.
+					Accédez plus rapidement à des pages web en les ajoutant à vos favoris LIlo;
+			\item Le fil d'actualité.
+					En descendant dans votre page d'accueil, vous pouvez consulter les actualités.
+		\end{itemize}	
+	\subsection{Effectuer sa première recherche sur Internet}
+		Pour effectuer une recherche, rien de plus simple ! 
+		Rendez-vous sur votre moteur de recherche, nous prendrons comme exemple Lilo.
+		Une fois sur la page d'accueil de Lilo, tapez les mots-clés pour votre recherche.
+		Par exemple "Pastèque".
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.3]{include/pasteque1.png}
+			\label{fig:pasteque1}
+			\caption{Recherche du mot "Pastèque" dans Lilo}
+		\end{figure}
+		Appuyer en suite sur la touche \texttt{Entrée} de votre clavier.\par
+		Et voilà, le moteur de recherche vous affiche une liste de page web en lien avec le mot clé "Pastèque".
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.3]{include/pasteque2.png}
+			\label{fig:pasteque2}
+			\caption{Liste des résultats pour le mot "Pastèque" dans Lilo}
+		\end{figure}
 
 \chapter{Mises à jour}\label{sec:maj}
 	Dans ce chapitre, nouvs allons aborder le problème des mises à jour;
