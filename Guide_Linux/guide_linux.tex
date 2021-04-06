@@ -3,7 +3,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{hyperref}
-%\usepackage{wrapfig}
+\usepackage{subcaption}
 
 \title{Petit guide d'utilisation de Linux Mint}
 \author{Association Eisenia}
@@ -39,14 +39,16 @@ Nous aborderons aussi d'autres thématiques comme l'utilisation d'Internet et le
 
 
 \chapter{Environnement Linux Mint}
-%\begin{wrapfigure}{l}{0.25\textwidth}
-	\includegraphics[scale=.05]{include/lm_logo.png}
+\begin{minipage}[c]{.25\textwidth}
+	\includegraphics[width=.85\textwidth]{include/lm_logo.png}
 %	\caption{Caption1}
 %	\label{fig:wrapfig}
-%\end{wrapfigure}
-Linux Mint est un système d'exploitation visant à être utilisé facilement par les particuliers et les professionnels.
-C'est un systèmes d'exploitation libre et gratuit assez récent s'appuyer sur d'autres systèmes d'exploitation de Linux (Ubuntu/Debian).
-Le but principal de Linux Mint est de faciliter au maximum l'utilisation d'un ordinateur pour le grand public.\par
+\end{minipage}
+\begin{minipage}[c]{.75\textwidth}
+	Linux Mint est un système d'exploitation visant à être utilisé facilement par les particuliers et les professionnels.
+	C'est un systèmes d'exploitation libre et gratuit assez récent s'appuyer sur d'autres systèmes d'exploitation de Linux (Ubuntu/Debian).
+\end{minipage}\par
+Le but principal de Linux Mint est de Linux Mint est de faciliter au maximum l'utilisation d'un ordinateur pour le grand public.\par
 Dans ce chapitre, nous intéresser aux bzses du système d'exploitation Linux Mint et plus particulièrement à son environnement de bureau appelé Cinnamon.
 \section{Se familiariser avec l'environnement de bureau Cinnamon de Linux Mint}
 	Pour bien commencer avec un nouvel envrironnement, il faut en connaître les bases.
@@ -350,7 +352,7 @@ Dans cette partie, nous présentons quelques logiciels simple et indispensables.
 Bien d'autres logiciels seront utiles en plus de ceux présentez ici.
 N'hésitez pas à explorer la logithèque.
 	\subsection{Le pack LibreOffice}\label{sec:libreoffice}
-		\begin{minipage}[c]{0.28\textwidth}
+		\begin{minipage}[c]{0.3\textwidth}
 			\includegraphics[width=\textwidth]{include/lo_logo.png}
 		\end{minipage}
 		\begin{minipage}[c]{.7\textwidth}
@@ -381,33 +383,48 @@ N'hésitez pas à explorer la logithèque.
 			Il est possible de créer une nouvelle base ou bien de se connecter à une base (JDBC par exemple). 
 		\end{itemize}\par
 		La suite bureautique de LibreOffice vous permet donc de lire et de rédiger des fichiers sous des formats de documents dits ouverts (.odf) mais aussi les formats de la suite bureautique de Microsoft (.docx, xlsx...).\par
-		Pour en savoir plus sur le pack LibreOffice et sur ses nombreuses fonctionnalités, vous pouvez consulter le site officiel : 
-		%\href{https://fr.libreoffice.org}{https://fr.libreoffice.org} \textit{(dernière consultation le 02/04/2021)}.
-	\subsection{Mozila Firefox}\label{sec:descfirefox}
-		Le navigateur Mozila Firefox va vous permettre d'afficher des pages web.\newline
-		Ce navigateur très connu et utilisé vous offre beacoup de paramètres d'affichage, de langue mais aussi de sécurité.\par
-		Mozila Firefox est un navigateur libre.
-		C'est-à-dire qu'il n'appartient pas à une entreprise dont le but est de faire de l'argent avec ce logiciel.
+		Pour en savoir plus sur le pack LibreOffice et sur ses nombreuses fonctionnalités, vous pouvez consulter le site officiel \footnote{
+		\href{https://fr.libreoffice.org}{https://fr.libreoffice.org} \textit{(dernière consultation le 02/04/2021)}}.
+	\subsection{Mozilla Firefox}\label{sec:descfirefox}
+		\begin{minipage}[c]{.7\textwidth}
+			Mozilla Firefox ext un navigateur web.
+			C'est-à-dire que son rôle est d'afficher des pages web (par exemple des pages au format .html ou .php).
+			Comme son nom l'indique, un navigateur vous permet de "naviguer" entre différentes pages web via des liens.
+			Mozilla Firefox est très connu et très utilisé à travers le monde.
+			Il vous offre beaucoup de paramètres d'affichages, de langues mais aussi de sécurité.
+			C'est également un navigateur libre.
+		\end{minipage}
+		\begin{minipage}[c]{.3\textwidth}
+			\includegraphics[width=\textwidth]{include/mf_logo.jpg}
+		\end{minipage}\par
 		Pour un navigateur web, cela garanti notamment une certaine sécurité sur nos données personnelles.
-		En effet, Firefox n'a aucun intérêt à revendre les données de ces utilisateurs, donc il en collecte que très peu.\par
-		Ce navigateur permet également de bloquer les traqueurs publicitaires.
-		...
-	\subsection{VLC}
+		En effet, Firefox n'a aucun intérêt à revendre les données de ces utilisateurs, donc les données collectées ne servent qu'au bon fonctionnement du logiciel.
+		Ce navigateur permet également de bloquer les traqueurs publicitaires.\par
+		N'hésitez pas à consulter le site officiel de Mozilla Firefox\footnote{\href{https://www.mozilla.org/fr/firefox/features/}{https://www.mozilla.org/fr/firefox/features/} (dernière consultation le 06/04/2021)} pour plus d'informations.
+		Vous pouvez aussi consulter la liste des extensions\footnote{\href{https://addons.mozilla.org/fr/firefox/}{https://addons.mozilla.org/fr/firefox/} (dernière consultation le 06/04/20201)} proposées par Mozilla Firefox.
+		Les extensions (ou plugins) sont des "petits plus" qu'on ajoute au navigateur pour l'améliorer et pour obtenir une fonctionnalité bien particulière.
 
 \chapter{Internet}
-Maintenant que nous nous sommes familiarisés avec cet environnement, il est temps d'aller surfer sur le web.\newline
-Dans ce chapitre, nous allons voir dans un premier temps comment nous connecter à internet.
-Dans un deuxième temps, nous allons mieux étudier le navigateur Mozila Firefox qui sera notre "porte" pour aller sur internet.
-Et dans un troisième temps, nous allons voir comment utiliser le moteur de recherche Lilo qui nous permettra de faires nos premières recherches sur internet.
+Maintenant que nous nous sommes familiarisés avec cet environnement, il est temps d'aller surfer sur le web.
+Internet, c'est la porte ouverte d'une connaissance mondiale partagée.
+S'il permet d'accéder à une multitude d'informations et de contenus divers, il est important de rappeler qu'Internet est aussi un endroit où des personnes malvaillantes peuvent se trouver.
+Elles peuvent propager de fausses informations (fake news en anglais), recourir à des virus ou à des logiciels malvaillants pour entrer dans votre ordinateur, etc.
+Du contenu se trouvant sur Internet peut aussi ne pas convenir aux enfants.
+Il faut donc s'en protéger et adopter les bons gestes lorsque l'on utilise internet et garder un esprit critique face à ce qu'on peut y trouver\par
+Dans ce chapitre consacré à Internet, nous verrons dans un premier temps comment nous connecter à Internet.
+Dans un deuxième temps, nous étudirons le navigateur Mozilla Firefox qui sera notre "porte" pour aller sur le web.
+Dans un troisième temps, nous allons voir comment utiliser le moteur de recherche Lilo qui nous permettra de faire nos premières recherches sur internet.
+Enfin, nous aborderons la question de la sécurité sur Internet.
 \section{Se connecter à son réseau}
-	Avant toute chose, nous devons être connecter à Internet. C'est-à-dire que nous devons établir un lien entre l'ordinateur et le réseau.
-	Pour cela, il y a deux façons de procéder :
+	Avant toute chose, nous devons être connecté à Internet. 
+	C'est-à-dire que nous devons établir un lien entre l'ordinateur et le réseau.
+	Pour cela, deux façons de procéder :
 	\begin{enumerate}
 		\item en se connectant via un un câble reliant l'ordinateur à la box ;
 		\item en se connectant via un le WiFi.
 	\end{enumerate}
 	\subsection{Avec un câble éthernet}
-		Avec votre ordinateur, un câble RJ45 (éthernet) vous a été fourni.
+		Pour connecter votre ordinateur, vous devez utiliser un câble RJ45 (éthernet).
 		L'embout ressemble à ceci :
 		\begin{figure}[h]
 			\centering
@@ -415,56 +432,113 @@ Et dans un troisième temps, nous allons voir comment utiliser le moteur de rech
 			\label{fig:rj45}
 			\caption{Câble éthernet RJ45}
 		\end{figure}\par
-		Ce câble se branche d'un côté à votre ordinateur et de l'autre à votre box (ou dans la prise éthernet de votre mur si elle existe).\par
+		Utiliser ce câble en le branchant d'un côté à votre ordinateur et de l'autre à votre box (ou dans la prise éthernet de votre mur si elle existe).
 		Une fois branché des deux côtés, l'icône "Internet" à droite sur la barre des tâches doit avoir changé et ressembler à ceci :
-%		\begin{figure}
-%			\centering
-%			\label{fig:iconeconnecte}
-%			\caption{Icône Internet "connecté"}
-%		\end{figure}
-		\newline
+		\begin{figure}[h]
+		\begin{subfigure}{\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{include/connexion_barre.png}
+			\caption{Icône indicant l'état de connexion sur la barre des tâches}
+			\label{fig:barre_taches_connexion}
+		\end{subfigure}\newline
+		\begin{subfigure}{.5\textwidth}
+		  \centering
+		  \includegraphics{include/non_connect.png}
+		  \caption{Avant le branchement du \newline câble RJ45}
+		  \label{fig:non_connect_rj45}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+		  \centering
+		  \includegraphics{include/connect.png}
+		  \caption{Après le branchement du \newline câble RJ45}
+		  \label{fig:connect_rj45}
+		\end{subfigure}
+		\caption{Affichage de l'état de connexion avec un câble éthernet}
+		\label{fig:connexion_rj45}
+		\end{figure}\par
 		Une notification a pu aussi apparaître tout en haut à droite de votre écran.
 		Elle doit ressember à ceci :
-%		\begin{figure}
-%			\centering
-%			\label{fig:notifconnecte}
-%			\caption{Notification "ordinateur connecté" à Internet}
-%		\end{figure}
-		\newline
-		Une fois que cette icône est apparue, félicitations, vous êtes connecté à Internet !
+		\begin{figure}[h]
+			\centering
+			\begin{subfigure}{.49\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{include/notif_deco.png}
+				\caption{Notification "ordinateur déconnecté" d'Internet}
+				\label{fig:notif_deco_rj45}
+			\end{subfigure}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{include/notif_co.png}
+				\caption{Notification "ordinateur connecté" à Internet}
+				\label{fig:notif_co_rj45}
+			\end{subfigure}
+			\label{fig:notif_connexion_rj45}
+			\caption{Notifications de connexion au réseau Internet}
+		\end{figure}\par
+		Vous voilà maintenant connecter à Internet !
 	\subsection{Avec le WiFi}
-		Avant de commencer.
-		Si vous disposez d'un ordinateur portable, votre ordinateur dispose d'un système de connexion au WiFi intégré et vous pouvez directement essayer de vous connecter.
-		Si vous disposez d'un ordinateur fixe, vous aurez probablement besoin d'un dispositif de connexion WiFi externe.
+		Avant de commencer, si vous disposez d'un ordinateur portable, votre ordinateur dispose probablement d'un système de connexion au WiFi intégré et vous pouvez directement essayer de vous connecter.
+		Si vous disposez d'un ordinateur de bureau, vous aurez probablement besoin d'un dispositif de connexion WiFi externe.
 		Nous vous conseillons d'utiliser une clé USB WiFi.
 		Elles sont très simple d'utilisation.
-		Pour certaines, il suffit de les brancher dans l'ordinateur et vous pourrez vous connecter aux réseaux WiFi.\par
-		Pour vous connecter, cliquez sur l'icône "Connexion à Internet" à droite sur la barre des tâches.
+		Pour la plupart de ces clés WiFi, il suffit de les brancher dans l'ordinateur et vous pourrez vous connecter aux réseaux WiFi.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=.4\textwidth]{include/clewifi.jpg}
+			\caption{Exemple d'une clé USB WiFi}
+			\label{fig:clewifi}
+		\end{figure}\par
+		Pour vous connecter, cliquez sur l'icône indiquant l'état de connexion de votre ordinateur. Cette icône se situe à droite sur la barre des tâches.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=\textwidth]{include/connexion_barre.png}
+			\caption{Icône indicant l'état de connexion sur la barre des tâches}
+			\label{fig:barre_connexion}
+		\end{figure}\par
 		Un petit menu s'affiche alors.
+		Vérifier que le bouton face à "Wi-Fi" est bien en position marche.
 		Cliquez sur le réseau WiFi qui vous intéresse.
 		Une boîte de dialogue s'ouvre pour vous demander un mot de passe.
-		Entrer le mot de passe de votre réseau et cliquez sur "Entrer".
+		Entrer le mot de passe de votre réseau et cliquez sur "Se conecter".
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=.9\textwidth]{include/wifi_mdp.png}
+			\caption{Boîte de dialogue de connexion à un réseau WiFi}
+			\label{fig:connexion_wifi}
+		\end{figure}
 		Si le mot de passe est incorrect, alors la boîte de dialogue vous demandera à nouveau d'entrer le mot de passe.\par
-		Si le mot de passe est le bon, la boîte de dialogue disparait et l'icône "Internet" à droite sur la barre des tâches doit avoir changé et ressembler à ceci :
-%		\begin{figure}
-%			\centering
-%			\label{fig:iconeconnecte}
-%			\caption{Icône Internet "connecté"}
-%		\end{figure}
+		La boîte de dialogue disparait et l'icône "Internet" à droite sur la barre des tâches doit avoir changé et ressembler à ceci :
+		\begin{figure}[h]
+			\centering
+			\includegraphics{include/connect_wifi.png}
+			\label{fig:iconeconnecte}
+			\caption{Icône WiFi "connecté"}
+		\end{figure}
 		\newline
 		Une notification a pu aussi apparaître tout en haut à droite de votre écran.
 		Elle doit ressember à ceci :
-%		\begin{figure}
-%			\centering
-%			\label{fig:notifconnecte}
-%			\caption{Notification "ordinateur connecté" à Internet}
-%		\end{figure}
-		\newline
-		Une fois que cette icône est apparue, félicitations, vous êtes connecté à Internet !
-\section{Utiliser le navigateur Mozila Firefox}\label{sec:utiliserfirefox}
+		\begin{figure}[h]
+		\centering
+			\begin{subfigure}{.51\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{include/notif_deco.png}
+				\caption{Notification "ordinateur déconnecté" d'Internet}
+				\label{fig:notif_deco_wifi}
+			\end{subfigure}
+			\begin{subfigure}{.48\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{include/notif_wifi.png}
+				\caption{Notification "ordinateur connecté" à Internet}
+				\label{fig:notif_co_wifi}
+			\end{subfigure}
+			\caption{Notifications de connexion à un réseau WiFi}
+			\label{fig:notif_wifi}
+		\end{figure}\par
+		Félicitations, vous êtes connecté à Internet !
+\section{Utiliser le navigateur Mozilla Firefox}\label{sec:utiliserfirefox}
 	Nous avons vu dans la Section \ref{sec:deffirefox} de nombreuses informations relatives à ce navigateur libre.
 	Si ce n'est pas déjà fait, je vous encourage à lire cette section.\par
-	Ici, nous allons voir comment utiliser le navigateur Mozila Firefox.\par
+	Ici, nous allons voir comment utiliser le navigateur Mozilla Firefox.\par
 	Pour commencer, ouvrez le navigateur web.
 	Pour cela, vous pouvez cliquez sur l'icône "Firefox" qui se trouve sur votre barre des tâche à droite de l'îcône du menu démarrer 
 		\includegraphics{include/icn_firefox.png}.
