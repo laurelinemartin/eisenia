@@ -1,9 +1,16 @@
 \documentclass[12pt]{book}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{subcaption}
+%\usepackage{geometry}
+
+%\geometry{hmargin=2.5cm, vmargin=4cm}
+\setlength{\parskip}{0.15cm}
+
 
 \title{Petit guide d'utilisation de Linux Mint}
 \author{Association Eisenia}
@@ -427,7 +434,7 @@ Dans ce chapitre consacré à Internet, nous verrons dans un premier temps comme
 Dans un deuxième temps, nous étudirons le navigateur Mozilla Firefox qui sera notre "porte" pour aller sur le web.
 Dans un troisième temps, nous allons voir comment utiliser le moteur de recherche Lilo qui nous permettra de faire nos premières recherches sur internet.
 Enfin, nous aborderons la question de la sécurité sur Internet.
-\section{Se connecter à son réseau}
+\section{Se connecter à son réseau}\label{sec:connexion}
 	Avant toute chose, nous devons être connecté à Internet. 
 	C'est-à-dire que nous devons établir un lien entre l'ordinateur et le réseau.
 	Pour cela, deux façons de procéder :
@@ -683,29 +690,82 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 	Vous vous demandez peut-être à quoi servent les mises à jours, et pourquoi il est parfois nécessaire de les effectuer. C'est ce que nous expliquons dans la première partie de ce chapitre.
 	Nous verrons ensuite comme effectuer des mises à jour avec l'environnement Linux Mint.
 	\section{Pourquoi faire les mises à jour ?}\label{sec:maj_pourquoi}
-		De manière globale, les mises à jour permettent à une application, un logiciel, un système, de corriger certaines erreurs, d'ajouter de nouvelles fonctionnalités ou bien de réparer certaines failles de sécurité.
-		Elles sont faites par les développeurs pour être appliquées simplement sur le terminal de tous les utilisateurs.
-		Les mises à jour se présentent sous la forme de version à télécharger.\par
+		De manière globale, les mises à jour permettent à une application, un logiciel, un système, d'ajouter de nouvelles fonctionnalités, de corriger certaines erreurs ou bien de réparer certaines failles de sécurité.
+		Elles sont faites par les développeurs pour être appliquées simplement sur le terminal (ordinateur, téléphone, etc.) de tous les utilisateurs.
+		Les mises à jour se présentent sous la forme d'une nouvelle version à télécharger.
 		Donc, une mise à jour permet d'améliorer l'ensemble du logiciel.
-		D'une part elle peut l'améliorer sur le plan de l'utilisation (nouvelles fonctionnalités, simplification de l'utilisation, correction de bogues, etc.).
-		Et d'autre part, elle peut l'améliorer sur le plan de la sécurité et résolvant certaines failles. 
-		Par conséquent, il est nécessaire de vérifier régulièrement si des mises à jour sont disponible.
+		D'une part, elle peut l'améliorer sur le plan de l'utilisation (nouvelles fonctionnalités, simplification de l'utilisation, correction de bogues, etc.).
+		Et d'autre part, elle peut l'améliorer sur le plan de la sécurité et résolvant certaines failles.\par
+		Dans le cas des systèmes d'exploitation de Linux, les mises à jour sont développées par la communauté du système.
+		C'est-à-dire, que ce sont des personnes non-rémunérées, passionnées et soucieuses d'améliorer Linux pour les utilisateurs de Linux (dont ils font partis).
+		Les mises à jour sont donc peu fréquentes pour ces systèmes d'exploitation.
+		Quand une nouvelle mise à jour est déployée (i.e. téléchargeable par tous les utilisateurs) elles sont souvent synônymes de corrections de bugs ou de suppression de faiblesses dans la sécurité.
+		Les mises à jour avec Linux sont travaillées plus longuement par la communauté et elles proposent des versions stables des systèmes (versions avec peu de bugs).
+		Par conséquent, il est nécessaire de vérifier régulièrement si des mises à jour sont disponibles.
 	\section{Effectuer les mises à jour}
-		Maintenant, nous allons voir comment faire une mise à jour sur un ordinateur Linux Mint. 
-		Notez qu'il vous faut que vous soyez connecter à Internet pour rechercher et installer les mises à jour.\par
-		Pour cela :
+		Comment faire une mise à jour sur un ordinateur Linux Mint ? 
+		Notez qu'il faut que vous soyez connectés à Internet tout le temps de la recherche et de l'installation des mises à jour.
+		Sans cela, les dernières mises à jour écritent par les développeurs ne peuvent pas vous parvenir. 
+		Votre ordinateur ne sait même pas qu'une nouvelle mise à jour est disponible.
+		Si vous ne savez pas comment vous connecter à Internet, vous pouvez consulter la Section \ref{sec:connexion}.\par
+		Pour rechercher de nouvelles mises à jour :
 		\begin{enumerate}
-			\item Sur la barre des tâches, à droite, il y a une petite icône en forme de bouclier, cliquez dessus;
+			\item Ouvrez le gestionnaire des mises à jour. Cliquez sur l'icône en forme de bouclier sur la barre des tâches, à droite;
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=\textwidth]{include/maj_barre.png}
+				\caption{Localisation de l'icône du gestionnaire des mises à jour sur la barre des tâches}
+				\label{fig:maj_barre}
+			\end{figure}
 			\item Une fenêtre s'ouvre et peut vous afficher différentes informations :
+			\item Une fenêtre de bienvenue peut s'afficher la première fois.
+					Vous pouvez simplement lire et cliquer sur "\texttt{Valider}";
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=\textwidth]{include/maj_accueil.png}
+				\caption{Page de bienvenue du gestionnaire des mises à jour}
+				\label{fig:maj_accueil}
+			\end{figure}
 			\begin{itemize}
-				\item Si aucune mise à jour n'est à faire, il vous est indiqué que "le système est à jour"
-				\item Si des mises à jour sont requisent, alors la liste de ces mises à jour est affichée.
+				\item Si aucune mise à jour n'est à faire, il est indiqué que "\texttt{\textbf{Votre système est à jour}}".
+						Vous pouvez fermer la fenêtre;
+				\begin{figure}[h]
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_ajour.png}
+					\caption{Gestionnaire des mises à jour : aucune mise à jour à effectuer}
+					\label{fig:maj_ajour}
+				\end{figure}
+				\item Si des mises à jour sont requises, alors la liste de ces mises à jour est affichée.
+				\begin{figure}[h]
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_afaire.png}
+					\caption{Gestionnnaire des mises à jour : liste des mises à jour à effectuer}
+					\label{fig:maj_afaire}
+				\end{figure}
 			\end{itemize}
-			\item Si rien est coché, cliquez sur "Tout sélectionner";
-			\item Cliquez sur le bouton "Installer les mises à jour", votre mot de passe pourra vous être demandé, entrez-le et valider;
+			\item Si rien n'est coché, cliquez sur "\texttt{Tout sélectionner}" ou cocher uniquement les mises à jour que vous souhaitez effectuer;
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=\textwidth]{include/maj_select.png}
+				\caption{Sélectionner toutes les mises à jour}
+				\label{fig:maj_select}
+			\end{figure}
+			\item Cliquez sur le bouton "\texttt{Installer les mises à jour}".
+					Votre mot de passe pourra vous être demandé, entrez-le et valider;
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=\textwidth]{include/maj_install.png}
+				\caption{Installer les mises à jours}
+				\label{fig:maj_install}
+			\end{figure}
 			\item Les mises à jour peuvent prendre du temps, ne fermez pas la fenêtre de chargement pendant ce temps.
 		\end{enumerate}
 		Félicitation ! Votre système et vos logiciels sont à jour !
+
+\chapter{Avancé}
+\section{Utiliser l'invit de commande}\label{sec:utiliserterminal}
+	\subsection{Présentation de l'invit de commande}
+	\subsection{Les commandes de bases}
 
 \chapter{Bonnes pratiques}
 	Un ordinateur est un objet très fragile. 
@@ -756,11 +816,5 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		Cepandant, vous serez amener à ouvrir et à télécharger des documents provenants d'autres utilisateurs.
 		Assurez-vous de toujours connaître votre interlocuteur (par mail par exemple). 
 		Si vous ne connaissez pas la personne qui vous envoie un document. ne l'ouvrez pas.\par
-
-\chapter{Avancé}
-\section{Utiliser l'invit de commande}\label{sec:utiliserterminal}
-	\subsection{Présentation de l'invit de commande}
-	\subsection{Les commandes de bases}
-
 
 \end{document}
