@@ -763,9 +763,39 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		Félicitation ! Votre système et vos logiciels sont à jour !
 
 \chapter{Avancé}
-\section{Utiliser l'invit de commande}\label{sec:utiliserterminal}
-	\subsection{Présentation de l'invit de commande}
-	\subsection{Les commandes de bases}
+Maintenant que vous vous êtes bien familiariser avec l'environnement de Linux Mint, que diriez-vous d'explorer des fonctions plus avancées et très pratiques que propose Linux ?\par
+Dans ce chapitre, nous vous présentez des fonctionnalités de Linux qui permettent de faire plus de choses sur son ordinateur et ce, de manière plus rapide.
+Nous présentons notamment le Terminal.
+\section{Utiliser le Terminal}\label{sec:terminal}
+	\subsection{Présentation du Terminal}
+		Le Terminal vous permet d'entrer des commandes UNIX (voir la Section \ref{sec:commandes}).
+		Ces commandes vous seront utiles dans toutes les situations, naviguer / interagir avec les répertoires et les fichiers, utiliser des commandes systèmes, faire des mises à jour, télécharger des logiciels, etc.\par
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=\textwidth]{include/terminal.png}
+			\caption{Le Terminal de Linux Mint 20}
+			\label{fig:terminal}
+		\end{figure}
+	\subsection{Les commandes de bases}\label{sec:commandes}
+		Dans cette section, nous vous présentons les commandes de bases à connaître pour utiliser plus efficacecement le Terminal.
+		La liste des commandes présentée ici est non-exhaustive, bien d'autres commandes existent, n'hésiter à rechercher sur Internet des commandes terminal.
+		Vou pouvez aussi consulter le manuel du terminal en tapant :
+		\begin{center}
+			\texttt{man [NOM D'UNE COMMANDE]}.
+		\end{center}
+		Par exemple :
+		\begin{center}
+			\texttt{man man} ou \texttt{man sudo} ou \texttt{man mkdir}, etc.
+		\end{center}
+		\begin{tabular}{|p{.25\textwidth}|p{.45\textwidth}|p{.3\textwidth}|}\hline
+			Commande & Descripion & Exepmle\\ \hline
+			\texttt{cd <CHEMIN>} & Permet de se rendre au répertoire passé en argument & \texttt{cd Documents/}\\\hline
+			\texttt{mkdir <NOM DU DOSSIER>} & Permet de créer un nouveau dossier à l'emplacement courant & \texttt{mkdir toto}\\\hline
+			\texttt{cp SOURCE DESTINATION} & Copie le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp image.jpg Images/}\\\hline
+			\texttt{mv SOURCE DESTINATION} & Déplace le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp image2.jpg Images/Autres/}\\\hline
+			\texttt{rm <NOM>} & Supprimer un fichier ou un répertoire & \texttt{rm helloworld.txt}\\\hline
+		\end{tabular}
+
 
 \chapter{Bonnes pratiques}
 	Un ordinateur est un objet très fragile. 
