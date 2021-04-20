@@ -9,8 +9,9 @@
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{geometry}
+\usepackage{pdfpages}
 
-%\geometry{hmargin=2.5cm, vmargin=4cm}
+%
 \setlength{\parskip}{0.15cm}
 
 
@@ -23,16 +24,23 @@
 \renewcommand{\tablename}{\textsc{Tableau}}
 \renewcommand{\figurename}{\textsc{Capture d'écran}}
 \renewcommand{\chaptername}{Chapitre}
-\maketitle
+%\maketitle
+	%\includepdf{page_de_garde/pagegarde.pdf}
+\includepdf[pagecommand={\newgeometry{hmargin=0cm, vmargin=0cm}}]{page_de_garde/pagegarde.pdf}
 \newpage
 	\begin{center}
-		\textbf{Résumé :}
+		\textbf{Avant-propos :}
 	\end{center}\par
 	Vous avez un nouvel ordinateur avec un environnement Linux Mint, mais vous ne vous y connaissez pas du tout en Linux, voir pas du tout en ordinateur ?
 	Pas de panique ! 
 	Ce livret reprend avec vous toutes les bases de ce système d'exploitation.\par
 	Ce guide pratique se base sur le système d'expoiration Linux Mint 20 Cinnamon.
-	Pas d'inquiétude, si vous disposez d'une autre version de Linux Mint, les informations contenues ici vous seront tout de même très utiles, mais les captures d'écrans seront peut-être différentes de votre système.
+	Pas d'inquiétude, si vous disposez d'une autre version de Linux Mint, les informations contenues ici vous seront tout de même très utiles, mais les captures d'écrans seront peut-être différentes de votre système.\par
+	\medskip
+	Ce guide est une initiative de l'Association Eisenia dans le cadre du projet Linux \& Populus.
+	L'objectif principal du projet Linux \& Populus est de lutter contre la fracture numérique, contre les déchets électroniques, contre l'obsolescence programmée et pour l'utilisation de logiciels libres.
+	Pour cela, le matériel informatique destiné à être jeté par les entreprises, les collectivités et les particuliers sont récupérés puis reconditionnés pour enfin être redistribués à un public en situation de fracture numérique.\par
+	N'hésitez pas à consulter la page web\footnote{\href{https://eisenia.org/linuxetpopulus/}{https://eisenia.org/linuxetpopulus/}} et la page Facebook \footnote{\href{https://www.facebook.com/linuxpopulus/}{ttps://www.facebook.com/linuxpopulus/}} de Linux \& Populus pour en savoir d'avantage sur ce projet.
 
 \newpage
 \tableofcontents
@@ -780,7 +788,7 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		\end{enumerate}
 		Félicitation ! Votre système et vos logiciels sont à jour !
 
-\chapter{Utilisation le Terminal}\label{sec:terminal}%{Avancé}
+\chapter{Utilisation du Terminal}\label{sec:terminal}%{Avancé}
 Maintenant que vous vous êtes bien familiariser avec l'environnement de Linux Mint, que diriez-vous d'explorer des fonctions plus avancées et très pratiques que propose Linux ?\par
 %Dans ce chapitre, nous vous présentez des fonctionnalités de Linux qui permettent de faire plus de choses sur son ordinateur et ce, de manière plus rapide.
 %Nous présentons notamment le Terminal.
@@ -903,11 +911,14 @@ Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelqu
 			En prenant garde à ne pas abîmer les composants de votre ordinateur, soufflez (ou aspirez) la poussière présente.
 			Vous pouvez vous aider d'un chiffon pour attraper la poussière dans les recoins.
 		\subsection{La chaleur}
-			La chaleur est l'ennemie de votre ordinateur.
+			La chaleur est l'ennemi de votre ordinateur.
 			En effet, lorsque le système chauffe trop cela peut entrainer des bogues, des erreurs dûes à des modifications électroniques sous l'effet de la chaleur.
 			Mis aussi, à trop haute température, les composants peuvent commencer à fondre.
 			C'est d'ailleurs pour éviter ces soucis qu'un ou plusieurs systèmes de refroidissement sont installés dans les ordinateurs. 
 			Une bonne pratique est de ne pas laisser votre ordinateur proche d'une source de chaleur (chaffage, cheminée, soleil,...). 
+		\subsection{L'humidité}
+			Voici un autre ennemi de votre ordinateur : l'humidité.
+			
 	\section{Sécurité sur internet}
 		Internet est une porte ouverte sur beaucoup de connaissances partagées entre tous les utilisateurs.
 		Cette outil donne accès à beaucoup d'informations et ce, en très peu de temps.\par
@@ -927,5 +938,28 @@ Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelqu
 		Cepandant, vous serez amener à ouvrir et à télécharger des documents provenants d'autres utilisateurs.
 		Assurez-vous de toujours connaître votre interlocuteur (par mail par exemple). 
 		Si vous ne connaissez pas la personne qui vous envoie un document. ne l'ouvrez pas.
+	\section{Gestion du stockage}
+		Votre ordinateur a un espace de stockage limité.
+		C'est-à-dire qu'il ne peut enregistre en mémoire qu'une certaine quantité de contenus.
+		Lorsque votre espace de stockage arrive à saturation, vous ne pouvez plus enregistrer de nouveaux éléments sur votre ordinateur.
+		Mais, la saturation de votre espace de stockage engendre également des problèmes internes à votre ordinateur.
+		Il peut manquer de place en mémoire pour effectuer des opérations et causer un arrêt de système.
+		Donc, il faut toujours un minimum d'espace libre (surtout quand on utiliser un SSD) pour permettre le bon fonctionnement de votre ordinateur.\par
+		\subsection{Suppression d'éléments plus utilisés}
+			Une bonne pratique est de supprimer régulièrement les logiciels et les documents que vous n'utilisé plus sur votre ordinateur.
+			Cela fera de la place sur votre disque de stockage facilement.
+		\subsection{Déplacement de documents vers des périphériques externes}
+			Une autre bonne pratique est de déplacer ces documents (textes, photos, vidéos, etc.) vers des périphériques externes tels que des clés USB de stockages ou des disques durs externes.
+			Vous pouvez également enregistrer vos fichiers sur des outils web appelés "Cloud" tel que blablabla.
+			Vos fichiers seront enregistrer sur des serveurs.
+			Nous vous recommandons de sauvegarder vos données sur vos propres disques de stockages externes.
+			Cela vous permettra de les conserver dans un endroit plus sûrs et de mieux contrôler le bon état de vos disques (contrairement à des serveurs distants).\par
+			Cette bonne pratique a un double avantage :
+			\begin{itemize}
+				\item D'une part, vous faites de la place sur votre disque de stockage interne tout en conservant vos fichiers;
+				\item Et d'autre part, vous conserverez vos documents même si votre ordinateur vient à boguer.
+				En effet, nous ne sommes pas à l'abri d'une défaillance grave de votre système ou tout simplement d'un choc qui engendrerais de graves problèmes.
+				Conserver ses fichiers ailleurs que sur l'ordinateur vous évitera de perdre l'ensemble de vos travaux et de vos souvenirs e
+			\end{itemize}
 
 \end{document}
