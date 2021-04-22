@@ -794,19 +794,21 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		Félicitation ! Votre système et vos logiciels sont à jour !
 
 \chapter{Utilisation du Terminal}\label{sec:terminal}%{Avancé}
-Maintenant que vous vous êtes bien familiariser avec l'environnement de Linux Mint, que diriez-vous d'explorer des fonctions plus avancées et très pratiques que propose Linux ?\par
+Maintenant que vous vous êtes bien familiarisés avec l'environnement de Linux Mint, que diriez-vous d'explorer des fonctions plus avancées et très pratiques que propose Linux ?\par
 %Dans ce chapitre, nous vous présentez des fonctionnalités de Linux qui permettent de faire plus de choses sur son ordinateur et ce, de manière plus rapide.
 %Nous présentons notamment le Terminal.
 %\section{Utiliser le Terminal}\label{sec:terminal}
-Le Terminal permet d'entrer des mots-clé capable d'être compris et exécuter par un ordinateur.
+Le Terminal permet d'entrer des mots-clé capables d'être compris et exécuté par un ordinateur.
 Il est bien souvent déroutant, voir effrayant pour les moins adèptes d'informatique d'entre nous.
-Pourtant, son utilisation peut s'avérer bien plus rapide voir indispensable dans certains cas.\par
+Pourtant, son utilisation peut s'avérer bien plus rapide voir indispensable dans certains cas.
+Il faut noter que lorsqu'on a un problème avec notre ordinateur sous un système d'exploitation Linux et que l'on cherche de l'aide sur Internet, une solution en ligne de commande est très souvent donnée par les internautes.
+Dans ce cas, rien de compliqué, il suffit de copier et de coller la ligne de commande indiquée et d'appuyer sur la touche "\texttt{Entrée}" de votre clavier pour résoudre le prolème.\par
 Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelques commandes de bases pour mieux l'apprivoiser.
 \section{Présentation du Terminal}
-	Le Terminal est- un programme qui vous permet d'entrer des commandes  (voir la Section \ref{sec:commandes}) destinées à être exécutées par votre ordinateur.
+	Le Terminal est un programme qui vous permet d'entrer des commandes (voir la Section \ref{sec:commandes}) destinées à être exécutées par votre ordinateur.
 	Ces commandes vous permettent d'intéragir directement (sans passer par un programme tiers) avec votre machine.
 	Elles vous seront utiles dans toutes les situations : naviguer / interagir avec les répertoires et les fichiers, interagir avec le système d'exploitation, faire des mises à jour, télécharger des logiciels, etc.\par
-	Pour imager, voyez le terminal comme une communication ouverte directe entre vous et votre ordinateur.
+	Pour imager, voyez le Terminal comme une communication ouverte directe entre vous et votre ordinateur.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{include/terminal_barre.png}
@@ -815,12 +817,14 @@ Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelqu
 	\end{figure}
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=\textwidth]{include/terminal.png}
+		\includegraphics[width=.8\textwidth]{include/terminal.png}
 		\caption{Une fenêtre du Terminal de Linux Mint 20}
 		\label{fig:terminal_ouvert}
 	\end{figure}\par
-	Quand on ouvre le Terminal, une pemière ligne s'affiche à l'écran :
+	Quand on ouvre le Terminal, une pemière ligne s'affiche à l'écran.
+	Elle est du type :
 	\begin{center}
+		\vspace*{-.4cm}
 		\texttt{utilisateur@ThinkCentre-A70:$\sim$ \$ }
 	\end{center}
 	Cette ligne vous donne plusieurs informations :
@@ -832,52 +836,54 @@ Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelqu
 		\item \texttt{\$} marque la fin du chemin courant;
 		\item Le rectangle blanc à la fin est le curseur;
 	\end{itemize}\par
-	Nous pouvons maintenant entrer nos premières commandes dans Terminal.
-\section{Les commandes de bases}\label{sec:commandes}
-	Une commande Linux se présente sous la forme :
+	Désormais, vous savez à quoi sert et à quoi ressemble le Terminal. 
+	Vous allez pouvoir entrer vos premières commandes et tester ses fonctionnalités de base.
+\section{Commandes de bases}\label{sec:commandes}
+	Une commande dans le Terminal Linux se présente sous la forme :
 	\begin{center}
 		\texttt{nom\_de\_la\_commande [OPTION(S)] <ARGUMENT(S)>}
 	\end{center}\par
 	Le nom de la commande est très souvent en minuscule.
-	On peut entrer un (ou plusieurs) option pour affiner notre commande.
-	Un argument est "l'objet" sur lequel nous souhaitons appliquer la commande. Il peut y a voir plusieurs arguments si la commande l'exisge.
-	Dans nos exemples du tableau \ref{tab:commande}, nous utilisons une nommanclature particulière :
+	Il est possible d'entrer une (ou plusieurs) option pour affiner la commande.
+	Un argument est "l'objet" sur lequel vous souhaitez appliquer la commande. 
+	Il peut y a voir plusieurs arguments si la commande l'exisge.
+	Dans les exemples du tableau \ref{tab:commande}, une nommanclature particulière est utilisée :
 	\begin{itemize}
-		\item Pour indiquer qu'il s'agit d'un mot-clé stricte à entrer dans le terminal tel quel, nous l'écrirons en minuscule;
-		\item Pour indiquer qu'il s'agit d'un mot-clé non obligatoire à sélectionner parmi une liste définie, nous l'écrirons entre crochets [] et en majuscule;
-		\item Pour indiquer qu'il s'agit d'un mot-clé qui change selon la situation (par exemple, le nom d'un fichier), nous l'écrirons entre chevrons <> et en majuscule.
+		\item Pour indiquer qu'il s'agit d'un mot-clé strict à entrer dans le Terminal tel quel, il sera écrit en minuscule;
+		\item Pour indiquer qu'il s'agit d'un mot-clé non obligatoire à sélectionner parmi une liste définie (une option), il sera écrit entre crochets \texttt{[]} et en majuscule;
+		\item Pour indiquer qu'il s'agit d'un mot-clé qui change selon la situation (un argument, par exemple, le nom d'un fichier), il sera écrit entre chevrons \texttt{<>} et en majuscule.
 	\end{itemize}\par
 	L'espace démarque la fin du nom de la commande et le début d'une option ou d'un argument.
 	Un espace est donc très important pour la bonne exécution de la commande.
-	Si le répertoire ou le fichier dans lequel vous souhaitez travailler contient un espace, nous vous conseillons de le renommer en amont pour vous faciliter la saisie de commande.
+	Si le répertoire ou le fichier dans lequel vous souhaitez travailler contient un espace, nous vous conseillons de le renommer en amont pour vous faciliter la saisie de commandes.
 	Vous pouvez aussi ajouter devant les espaces dans le nom du répertoire un \texttt{\textbackslash }.
-	Ainsi, lors de l'exécution de la commande, l'ordinateur comprendra, grâce au \textbackslash que le nom du répertoire ou du fichier et composé d'espace et qu'il ne s'agit pas du passage à une autre partie de la commande.
+	Ainsi, lors de l'exécution de la commande, l'ordinateur comprendra, grâce au \textbackslash que le nom du répertoire ou du fichier et composé d'un espace et qu'il ne s'agit pas du passage à une autre partie de la commande.
 	Par exeple, si votre répertoire s'appelle "\texttt{Hello World}", vous devez entrer en ligne de commande "\texttt{Hello\textbackslash~World}".\par
 	Ci-dessous, nous vous présentons un tableau \ref{tab:commande}.
 	Il contient quelques commandes de bases à connaître pour utiliser plus efficacecement le Terminal.
-	N'hésitez pas à taper ces commandes dans votre terminal, pour observer leurs actions.\par
+	N'hésitez pas à taper ces commandes dans votre Terminal, pour observer leur action.\par
 	La liste des commandes présentée ici est non-exhaustive, bien d'autres commandes existent.
-	N'hésiter à rechercher sur Internet des commandes terminal.
-	Vous pouvez aussi consulter le manuel du terminal en tapant :
+	N'hésiter à rechercher sur Internet des commandes Terminal.
+	Vous pouvez aussi consulter le manuel du Terminal en tapant :
 	\begin{center}
-		\texttt{man <NOM D'UNE COMMANDE>}.
+		\texttt{man <NOM\_D'UNE\_COMMANDE>}.
 	\end{center}
 	Par exemple : \texttt{man man} ou \texttt{man sudo} ou \texttt{man mkdir}, etc.
-%	\begin{table}[t] \newgeometry{left=2cm, right=0.5cm}
-	\begin{longtable}{|p{.25\textwidth}|p{.45\textwidth}|p{.3\textwidth}|}\hline
+	\begin{longtable}{|p{.3\textwidth}|p{.4\textwidth}|p{.3\textwidth}|}\hline
 		\rowcolor{lightgray}Commande & Descripion & Exepmle\\\hline
 		\endhead
-		\texttt{cd <CHEMIN>} & Permet de se rendre au répertoire passé en argument & \texttt{cd Documents/}\\\hline
+		\texttt{cd <CHEMIN>} & Se rendre dans le répertoire passé en argument & \texttt{cd Documents/}\\\hline
 		\texttt{pwd} & Affiche le chemin absolu du réperoire courant & \texttt{pwd}\\\hline
-		\texttt{ls [OPTION]} & Permet d'afficher le contenu du répertoire courant & ls\\\hline
+		\texttt{ls [OPTION]} & Afficher le contenu du répertoire courant & ls\\\hline
 		\texttt{mkdir [OPTION] <NOM\_DU\_DOSSIER>} & Permet de créer un nouveau dossier à l'emplacement courant & \texttt{mkdir toto}\\\hline
-		\texttt{cp [OPTION] [CHEMIN/]SOURCE [CHEMIN/]DESTINATION} & Copie le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp image.jpg Images/}\\\hline
-		\texttt{mv [OPTION] [CHEMIN/]SOURCE [CHEMIN/]DESTINATION} & Déplace le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp image2.jpg Images/Autres/}\\\hline
-		\texttt{rm [OPTION] <NOM>} & Supprimer un fichier ou un répertoire & \texttt{rm helloworld.txt}\\\hline
+		\texttt{cp [OPTION] [CHEMIN/]SOURCE [CHEMIN/]DESTINATION} & Copier le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp image.jpg Images/Photos/}\\\hline
+		\texttt{mv [OPTION] [CHEMIN/]SOURCE [CHEMIN/]DESTINATION} & Déplacer le document \texttt{SOURCE} dans le répertoire \texttt{DESTINATION} & \texttt{cp Images/image2.jpg Images/Autres/}\\\hline
+		\texttt{rm [OPTION] <NOM>} & Supprimer un fichier & \texttt{rm helloworld.txt}\\\hline
 		\texttt{rmdir <NOM\_REPERTOIRE>} & Supprimer un répertoire vide & \texttt{rmdir toto}\\\hline
-		\texttt{sudo <...>} & Vous donne les droits utilisateurs sur une commande. Attention ! Utiliser les privilèges utilisateurs implique d'enlever les "gardes-fous" que le système met en place pour éviter de faire une action irréversible. Il faut donc être sûr de la commande et de son utilité & \texttt{sudo rm hello.txt}\\\hline
-		\texttt{cat <NOM\_DU\_FICHIER>} & Afficher le contenu d'un fichier. Attention ! Certains fichiers utilise des codes particuliers qui peuvent être mal retranscrits dans le terminal & \texttt{cat toto.txt}\\\hline
-		\texttt{file <NOM\_DU\_FICHIER} & Afficher les méta-données d'un fichier & \texttt{file toto.txt}\\\hline
+		\texttt{sudo <...>} & Utiliser les droits Super-Utilisateur sur une commande. Attention ! Utiliser les privilèges de super-utilisateur implique d'enlever les "gardes-fous" que le système met en place pour éviter de faire une action irréversible. Il faut donc être sûr de la commande et de son utilité & \texttt{sudo rm hello.txt}\\\hline
+		\texttt{cat <NOM\_DU\_FICHIER>} & Afficher le contenu d'un fichier. Attention ! Certains fichiers utilisent des codes particuliers qui peuvent être mal retranscrits dans le terminal & \texttt{cat toto.txt}\\\hline
+		\texttt{cat [OPTION] <FICHIER1> <FICHIER2> > <DESTINATION} & Mettre à la suite les textes des fichiers \texttt{FICHIER1} et \texttt{FICHIER2} dans le fichier \texttt{DESTINATION}. Si ce dernier fichier existe déjà, son texte est remplacé, sinon le fichier est créé. & \texttt{cat hello.txt toto.txt > hello\_toto.txt}\\\hline
+		\texttt{file [OPTION] <NOM\_DU\_FICHIER} & Afficher les méta-données d'un fichier & \texttt{file toto.txt}\\\hline
 		\texttt{locate [OPTION] <MOT(S)>} & Liste tous les fichiers dont le nom contient le ou les mots passés en arguments. S'il y a plusieurs mots, mettre un * entre chaque mot. & locate toto*tata\\\hline
 		\texttt{zip [OPTION] <NOM\_ARCHIVE>.zip <NOM>} & Compresser un fichier ou un répertoire. & zip toto.zip toto/\\\hline
 		\texttt{unzip [OPTION] <NOM\_ARCHIVE>} & Décompresser une archive & \texttt{unzip toto.zip}\\\hline
@@ -889,7 +895,7 @@ Dans ce chapitre, nous démystifions donc le Terminal et nous présentons quelqu
 	\caption{Liste de commandes de bases}
 	\label{tab:commande}
 	\end{longtable}\par
-	Pour terminer une commande vous pouvez appuyer sur \texttt{CTRL+Z}.
+	Pour terminer ou annuler une commande vous pouvez appuyer sur \texttt{CTRL+Z}.
 
 \chapter{Bonnes pratiques}
 	Un ordinateur est un objet très fragile. 
