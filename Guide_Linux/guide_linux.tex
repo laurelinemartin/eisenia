@@ -20,7 +20,7 @@
 \date{2021}
 
 \begin{document}
-\renewcommand{\contentsname}{Table des matières}
+\renewcommand{\contentsname}{Sommaire}
 \renewcommand{\tablename}{\textsc{Tableau}}
 \renewcommand{\figurename}{\textsc{Capture d'écran}}
 \renewcommand{\chaptername}{Chapitre}
@@ -40,7 +40,7 @@
 	Ce guide est une initiative de l'Association Eisenia dans le cadre du projet \textit{"Linux \& Populus"}.
 	L'objectif principal de ce projet est de lutter contre la fracture numérique, contre les déchets électroniques, contre l'obsolescence programmée et pour la promotion de logiciels libres.
 	Pour cela, du matériel informatique destiné à être jeté par les entreprises, les collectivités et les particuliers est récupéré puis reconditionné pour enfin être redistribué à un public en situation de fracture numérique.\par
-	N'hésitez pas à consulter la page web\footnote{\href{https://eisenia.org/linuxetpopulus/}{https://eisenia.org/linuxetpopulus/}} et la page Facebook \footnote{\href{https://www.facebook.com/linuxpopulus/}{ttps://www.facebook.com/linuxpopulus/}} de Linux \& Populus pour en savoir d'avantage sur ce projet.
+	N'hésitez pas à consulter la page web\footnote{\includegraphics[scale=.012]{include/web.png}~ \href{https://eisenia.org/linuxetpopulus/}{https://eisenia.org/linuxetpopulus/}} et la page Facebook \footnote{\includegraphics[scale=.006]{include/fb.png}~ \href{https://www.facebook.com/linuxpopulus/}{https://www.facebook.com/linuxpopulus/}} de Linux \& Populus pour en savoir d'avantage sur ce projet.
 	\vfill
 	\begin{center}
 		\includegraphics[scale=.5]{include/linuxpop.png}
@@ -83,7 +83,7 @@ Nous aborderons aussi d'autres thématiques comme l'utilisation d'Internet et le
 \end{minipage}\par
 Le but principal de Linux Mint est de faciliter au maximum l'utilisation d'un ordinateur pour le grand public.\par
 Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Linux Mint et plus particulièrement à son environnement de bureau appelé Cinnamon.
-\section{Se familiariser avec l'environnement de bureau Cinnamon de Linux Mint}
+\section{Se familiariser avec l'environnement de bureau}
 	Pour bien commencer avec un nouvel envrironnement, il faut en connaître les bases.
 	Savoir bien utiliser les bases de l'environnement, c'est mieux le comprendre et ainsi l'utiliser plus simplement, plus rapidement et se sentir plus à l'aise avec son matériel.\par
 	Dans cette section nous allons voir les éléments basiques pour bien commencer avec ce nouvel environnement de travail.
@@ -122,7 +122,7 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 			Ainsi, vous n'aurez qu'à cliquer sur cette icône pour ouvrir vos fichiers, vos dossiers ou vos applications favoris.\newline
 			Pour mettre un nouvel élément sur votre bureau :
 			\begin{enumerate}
-				\item Ouvrir le Menu Démarrer (voir la Section \ref{menu}) et retrouver l'élément que vous voulez ajouter au Bureau
+				\item Ouvrir le Menu Démarrer (voir la Section \ref{sec:menu}) et retrouver l'élément que vous voulez ajouter au Bureau
 				\item Faire clic droit avec la souris sur l'élément;
 				\item Sélectionner "\texttt{Ajouter au bureau}";
 				\item Un raccourci a été ajouté sur votre bureau.
@@ -164,19 +164,19 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 		\end{itemize}\par
 		Enfin tout à droite de la barre des tâches, vous trouverez l'heure, elle se synchronise automatiquement une fois l'ordinateur connécté à Internet.
 		En cliquant sur l'heure, vous affichez un calandrier.
-	\subsection{Le menu démarrer}\label{sec:menu}
+	\subsection{Le menu}\label{sec:menu}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=.4\textwidth]{include/menu.png}\newline
 			\caption{Le Menu}
 			\label{fig:menu}
 		\end{figure}\par
-		Le menu démarrer permet d'accéder à l'ensemble des applications qui sont présentes sur votre ordinateur.
+		Le Menu de Linux permet d'accéder à l'ensemble des applications qui sont présentes sur votre ordinateur.
 		Comme il est ordonné, il est très simple de s'y retrouver et de l'utiliser.
 		Ce menu vous sera indispensable lorsque vous aurez besoin d'un logiciel ou autre.\par
 		Le menu démarrer se décompose en quatre parties :
 		\begin{enumerate}
-			\item La barre latérale tout à gauche contient lesz outils de bases : le Navigateur Firefox (voir Sections \ref{sec:descfirefox} et \ref{sec:utiliserfirefox}); l'invit de commande (voir Section \ref{sec:utiliserterminal}); ...;
+			\item La barre latérale tout à gauche contient lesz outils de bases : le Navigateur Firefox (voir Sections \ref{sec:descfirefox} et \ref{sec:utiliserfirefox}); l'invit de commande (voir Chapitre \ref{sec:terminal}); ...;
 			\item Le menu principal au centre contient toutes les catégories de logiciel;
 			\item Le menu de droite contient les éléments contenu dans la catégorie sélectionnée;
 			\item La barre de recherche en haut permet de rechercher par mots-clés;
@@ -215,12 +215,6 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 		Pour éteindre votre machine :
 		\begin{enumerate}
 			\item Ouvrez le Menu et cliquez sur l'icône rouge en bas à gauche de la barre latérale;
-%			\begin{figure}[h]
-%				\centering
-%				\includegraphics[width=.8\textwidth]{include/eteindre_menu.png}
-%				\caption{Menu : bouton d'extinction de l'ordinateur}
-%				\label{fig:eteindre_menu}
-%			\end{figure}
 			\item Une boîte de dialogue s'ouvre et vous propose plusieurs options;
 			\begin{figure}[h]
 				\centering
@@ -249,9 +243,30 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 	Une fois cela fait, votre ordinateur aura peut-être besoin de redémarrer.
 	Une fois redémarré, vous pourrez utiliser votre périphérique.
 \section{Paramètrage du compte}
-	Pour personnaliser d'avantage votre ordinateur vous pouvez modifier le nom d'utilisateur, le mot de passe, l'avatar, le thème général...
+	Pour personnaliser d'avantage votre ordinateur vous pouvez modifier la langue, le nom d'utilisateur, le mot de passe, l'avatar, le thème général...
 	Dans cette section, nous expliquons comment faire ces changements.
-	\subsection{Modifier le nom de l'utilisateur}
+	\subsection{Modification de la langue du système}
+		Pour être plus à l'aise avec votre ordinateur, vous ressentirez peut-être le besoin de changer la langue de votre système.
+		Pour changer la langue :
+		\begin{itemize}
+			\item Ouvrez le Menu;
+			\item Cliquez sur "Préférences" puis descendez en cliquez sur "Langues";
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=.6\textwidth]{include/langues.png}
+				\caption{Paramètres des langues}
+				\label{fig:langue}
+			\end{figure}
+			\item Une fenêtre s'ouvre et vous proposes plusieurs modifications :
+			\begin{itemize}
+				\item Le champ "\texttt{Langue}" désigne la langue du système;
+				\item Le champ "\texttt{Région}" désigne la région dans laquelle vous résidez pour normaliser notamment la monnaie, l'écriture numérique, etc.;
+				\item Le champs "\texttt{Format de l'horloge}" permet de formaliser de la date et de l'heure par rapport au pays où vous résidez;
+				\item Cliquez sur le bouton "\texttt{Appliquer à tout le système}" une fois vos réglages terminez pour valider et changer la langue du système;
+				\item Si vous ne trouvez pas une langue ou une région, vous pouvez l'installer en cliquant sur le bouton "\texttt{Installer/supprimer des langues}"
+			\end{itemize}
+		\end{itemize}
+	\subsection{Modification le nom de l'utilisateur}
 		Le nom d'utilisateur est le nom que vous donner au compte enregistré sur votre ordinateur.
 		Vous pouvez le personnalier, pour cela :
 		\begin{enumerate}
@@ -261,29 +276,33 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 			\item Cliquez sur votre compte (ici "utilisateur");
 			\begin{figure}[h]
 				\centering
-				\includegraphics[width=\textwidth]{include/users.png}
+				\includegraphics[width=.5\textwidth]{include/users.png}
 				\caption{Liste des utilisateurs}
-				\label{fig:nomuser}
+				\label{fig:listuser}
 			\end{figure}
 			\item Cliquez sur le nom d'utilisateur actuel face au champs "Nom :"
 			\begin{figure}[h]
 				\centering
-				\includegraphics[width=.8\textwidth]{include/nomuser.png}
+				\includegraphics[width=.53\textwidth]{include/nomuser.png}
 				\caption{Modifier le nom d'utilisateur}
 				\label{fig:nomuser}
 			\end{figure}
 			\item Tapez votre nouveau nom d'utilisateur puis appuyez sur la touche "\texttt{Entrée}" du clavier.
 		\end{enumerate}
 		Félicitations ! Vous avez changé votre nom d'utilisateur.
-	\subsection{Modifier le mot de passe}
+	\subsection{Modification le mot de passe}
 		Le mot de passe de votre ordinateur est très important. 
-		Il protège votre ordinateur contre une utilisation malvaillante ou d'une erreur de manipulation en vous demandant de confirmer votre mot de passe.
-		Vous pouvez le modifier, pour cela :
+		Il protège votre ordinateur contre une utilisation malvaillante ou d'une erreur de manipulation en vous demandant de confirmer votre mot de passe avant chaque opération importante.
+		Sous Linux, le mot de passe est obligatoire sur tous les ordinateurs.
+		Vous pouvez le désactiver pour l'ouverture de session, mais cela n'est pas très conseillé.
+		D'une part, pour des raisons de sécurité.
+		Et d'autre part, pour éviter de l'oublier lorsque vous voudrez effectuer des actions importantes sur votre système.
+		Pour modifier le mot de passe :
 		\begin{enumerate}
 			\item Ouvrez le Menu;
 			\item Cliquez sur "Administration" puis descendez et cliquez sur "Utilisateurs et Groupes";
 			\item Si besoin, entrez votre mot de passe;
-			\item Cliquez sur votre compte (ici "utilisateur", voir la Capture d'écran \ref{fig:nomuser});
+			\item Cliquez sur votre compte (ici "utilisateur", voir la Capture d'écran \ref{fig:listuser});
 			\item Cliquez sur le mot de passe caché actuel face au champs "Mot de passe :"
 			\begin{figure}[h]
 				\centering
@@ -294,7 +313,7 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 			\item Tapez votre nouveau mot de passe et confirmez-le.
 		\end{enumerate}
 		Félicitations ! Vous avez changé votre mot de passe.
-	\subsection{Modifier l'avatar}
+	\subsection{Modification l'avatar}
 		L'avatar de votre compte est visible lors de votre connexion à l'ordinateur et lors de l'affichage de votre compte.
 		Vous pouvez le personnaliser, pour cela :
 		\begin{enumerate}
@@ -312,7 +331,7 @@ Dans ce chapitre, nous nous intéressons aux bases du système d'exploitation Li
 			\item Sélectionnez un nouvel avatar.
 		\end{enumerate}
 		Félicitations ! Vous avez changé votre avatar.
-	\subsection{Modifier le thème}\label{sec:theme}
+	\subsection{Modification le thème}\label{sec:theme}
 		 Pour personnaliser un peu plus votre environnement de travail ou pour un meilleur confort visuel, vous aurez peut-être envie de changer le thème de votre ordinateur.
 		 Pour cela, rien de plus simple :
 		 \begin{enumerate}
@@ -578,7 +597,7 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		\end{figure}\par
 		Félicitations, vous êtes connecté à Internet !
 \section{Utiliser le navigateur Mozilla Firefox}\label{sec:utiliserfirefox}
-	Nous avons vu dans la Section \ref{sec:deffirefox} de nombreuses informations relatives à ce navigateur libre.
+	Nous avons vu dans la Section \ref{sec:descfirefox} de nombreuses informations relatives à ce navigateur libre.
 	Si ce n'est pas déjà fait, nous vous encourageons à lire cette section pour prendre connaissance des fonctionnalités présentées par Firefox.\par
 	Ici, nous allons voir comment utiliser le navigateur Mozilla Firefox.\par
 	Pour commencer, ouvrez le navigateur web.
@@ -590,7 +609,7 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		\label{fig:mf_barre}
 	\end{figure}\par
 	Une nouvelle fenêtre s'ouvre et affiche votre page d'accueil.
-	Ici, notre page d'accueil est le moteur de recherche Lilo (voir la Section \ref{sec:ilo}).
+	Ici, notre page d'accueil est le moteur de recherche Lilo (voir la Section \ref{sec:lilo}).
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=.9\textwidth]{include/accueil_mf.png}
@@ -616,13 +635,18 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		\item Ce bouton vous permet d'afficher tous vos marque-pages;
 		\item Ce bouton vous permet d'accéder à différents paramètres du navigateur.
 	\end{enumerate}
-\section{Utiliser le moteur de recherche Lilo}\label{sec:lilo}
+\section{Utiliser un moteur de recherche}\label{sec:moteurrecherche}
 	Pour effectuer vos recherches sur internet, vous aurez besoin d'un moteur de recherche.
 	Un moteur de recherche permet, grâce à des mots-clés, de faire des recherches sur le web.
-	A partir de ces mots-clés, le moteur de recherche récupère les pages web les plus pertinentes et en faire une liste.
+	A partir de ces mots-clés, le moteur de recherche récupère les pages web les plus pertinentes et en fait une liste.
 	Le moteur de recherche est donc un allié indispensable pour effectuer vos recherches.\par
-	Dans cette section, nous vous présentons le moteur de recherches Lilo.
-	\subsection{Présentation de Lilo}
+	Dans cette section, nous vous présentons le fonctionnnement d'un moteur de recherche en prennant pour exemple Lilo.
+	Nous vous présentons ce moteur de recherche dit "solidaire". 
+	Il permet de financer des projets grâces aux recherches sur le web qu'effectuent les internautes.
+	Il s'inscrit donc dans une démarche sociale et solidaire à laquelle nous adhérons entièrement.
+	Bier sûr, il existe énéormément d'autres moteurs de recherche tels que Qwant\footnote{\href{https://www.qwant.com/}{https://www.qwant.com/}} ou Ecosia\footnote{\href{https://www.ecosia.org/}{https://www.ecosia.org/}}.
+	N'hésitez pas à vous renseigner et à choisir le moteur de recherche qui vous correspond le mieux.
+	\subsection{Présentation d'un moteur de recherche, l'exemple de Lilo}\label{sec:lilo}
 		\hspace{-.8cm}
 		\begin{minipage}[c]{.38\textwidth}
 			\centering
