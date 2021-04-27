@@ -372,10 +372,10 @@ Seuls quelques logiciels seront détaillés dans ce chapitre, nous vous invitons
 	\begin{enumerate}
 		\item Ouvrez le Menu;
 		\item Cliquez sur la section "\texttt{Administration}" puis descendez jusqu'à "\texttt{Logithèque}".
-	\end{enumerate}\par
+	\end{enumerate}\newpage
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=.8\textwidth]{include/logitheque.png}
+		\includegraphics[width=\textwidth]{include/logitheque.png}
 		\caption{Accueil de la Logithèque}
 		\label{fig:logitheque}
 	\end{figure}\par
@@ -387,11 +387,11 @@ Seuls quelques logiciels seront détaillés dans ce chapitre, nous vous invitons
 	\end{enumerate}
 \section{Exemple de recherche dans la logithèque}\label{sec:exlogitheque}
 	Voici un exemple simple pour rechercher et installer facilement un logiciel ou une application via la logithèque.\par
-	Pour cela, nous allons prendre l'exemple de l'application VLC.
+	Pour cela, nous allons prendre l'exemple du logiciel VLC.
 	VLC (VideoLAN Client) est un lecteur multimédia et de flux libre.
 	Il permet notamment de lire des fichiers audios et viéos aux formats très variés.\par
-	Pour commencer, ouvrez la Logithèque.
-	La logithèque peut prendre quelques secondes à se charger.
+	Pour commencer, assurez-vous de bien être connecté à Internet puis ouvrez la Logithèque.
+	Cela peut prendre quelques secondes à de chargement.
 	Une fois sur la page d'accueil, tapez "\textit{VLC}" dans la barre de recherche située en haut à droite de la fenêtre.
 	La recherche s'effectue automatiquement et la logithèque vous renvoie une liste d'applications disponnibles selon les mots-clés entrés.
 	\begin{figure}[h]
@@ -401,22 +401,38 @@ Seuls quelques logiciels seront détaillés dans ce chapitre, nous vous invitons
 		\label{fig:vlc1}
 	\end{figure}\par
 	Cliquez sur le premier résultat de la liste.
-	Le détail de cette application s'affiche.
+	Le détail du logiciel s'affiche.
 	On y retrouve une description, des captures d'écrans et les avis d'autres utilisateurs.
+	Pour installer ce logiciel sur votre ordinateur, cliquez sur le bouton vert "\texttt{Installation}" situé en haut à droite.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=.8\textwidth]{include/vlc2.png}
-		\caption{Détails de l'application "\textit{VLC}"}
+		\caption{Détails du logiciel "\textit{VLC}"}
 		\label{fig:vlc2}
 	\end{figure}\par
-	Pour installer cette application sur votre ordinateur, cliquez sur le bouton vert "\texttt{Installation}" sité en haut à droite.
+	Une barre de chargement s'affiche alors à la place du bouton (voir la Captrure d'écran \ref{fig:vlc3}.
+	Cela indique que l'installation du logiciel est en cours.
+	Une fois l'installation terminée, les boutons "\texttt{Lancer}" et "\texttt{Supprimer}" apparaissent (voir la Captrure d'écran \ref{fig:vlc4}=.
+	Vous pouvez cliquer sur "\texttt{Lancer}" pour démarrer l'application.
+	Le bouton "\texttt{Suprimmer}" vous permet de désinstaller l'application.
+	Vous pouvez aussi retrouver les applications et logiciels que vous téléchargés directement dans le Menu de Linux (voir la Section \ref{sec:menu}) en tapant son nom dans la barre de recherche.
 	\begin{figure}[h]
-		\centering
-		\includegraphics[width=.8\textwidth]{include/vlc3.png}
-		\caption{Détails de l'application "\textit{VLC}"}
-		\label{fig:vlc2}
-	\end{figure}
-	\textit{faire une subfigure avec meteo4 et meteo5}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{include/vlc3.png}
+			\caption{\textit{VLC} en cours d'installation}
+			\label{fig:vlc3}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{include/vlc3.png}
+			\caption{\textit{VLC} installé sur l'ordinateur}
+			\label{fig:vlc4}
+		\end{subfigure}
+		\caption{Installation du logiciel \textit{VLC}}
+		\label{fig:vlc3_4}
+	\end{figure}\par
+	Félicitations, vous venez d'installer votre premier logiciel !
 \section{Logiciels indispensables pour bien démarrer}
 	Savoir télécharger des logiciels sur son ordinateur, c'est bien.
 	Savoir quels logiciels installer, c'est mieux !\par
@@ -772,7 +788,7 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 		Les mises à jour avec Linux sont travaillées plus longuement par la communauté et elles proposent des versions stables des systèmes (versions avec peu de bogues).
 		Par conséquent, il est nécessaire de vérifier régulièrement si des mises à jour sont disponibles.
 		Il est recommandé de vérifier si des mises à jour sont disponible tous les deux mois environ.
-	\section{Effectuer les mises à jour}
+	\section{Comment faire les mises à jour}
 		Comment faire une mise à jour sur un ordinateur Linux Mint ? 
 		Notez qu'il faut que vous soyez connectés à Internet tout le temps de la recherche et de l'installation des mises à jour.
 		Sans cela, les dernières mises à jour écritent par les développeurs ne peuvent pas vous parvenir. 
@@ -790,51 +806,56 @@ Enfin, nous aborderons la question de la sécurité sur Internet.
 			\item Une fenêtre s'ouvre et peut vous afficher différentes informations :
 			\item Une fenêtre de bienvenue peut s'afficher la première fois.
 					Vous pouvez simplement lire et cliquer sur "\texttt{Valider}";
+			\newpage
 			\begin{figure}[h]
 				\centering
-				\includegraphics[width=.4\textwidth]{include/maj_accueil.png}
+				\includegraphics[width=.6\textwidth]{include/maj_accueil.png}
 				\caption{Page de bienvenue du gestionnaire des mises à jour}
 				\label{fig:maj_accueil}
 			\end{figure}
-				\begin{figure}[h]
-					\begin{subfigure}{.5\textwidth}
-						\centering
-						\includegraphics[width=\textwidth]{include/maj_ajour.png}
-						\caption{Aucune mise à jour à effectuer}
-						\label{fig:maj_ajour}
-					\end{subfigure}
-					\begin{subfigure}{.5\textwidth}
-						\centering
-						\includegraphics[width=\textwidth]{include/maj_afaire.png}
-						\caption{Liste des mises à jour à effectuer}
-						\label{fig:maj_afaire}
-					\end{subfigure}
-					\caption{Gestionnaire des mises à jour}
-					\label{fig:maj}
-				\end{figure}
 			\begin{itemize}
+				\begin{figure}[h]
+				\begin{subfigure}{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_ajour.png}
+					\caption{Aucune mise à jour à effectuer}
+					\label{fig:maj_ajour}
+				\end{subfigure}
+				\begin{subfigure}{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_afaire.png}
+					\caption{Liste des mises à jour à effectuer}
+					\label{fig:maj_afaire}
+				\end{subfigure}
+				\caption{Gestionnaire des mises à jour}
+				\label{fig:maj}
+			\end{figure}
 				\item Si aucune mise à jour n'est à faire, il est indiqué que "\texttt{\textbf{Votre système est à jour}}".
 				Vous pouvez fermer la fenêtre (Capture d'écran (voir Capture d'écran \ref{fig:maj_ajour});
 				\item Si des mises à jour sont requises, alors la liste de ces mises à jour est affichée (voir Capture d'écran \ref{fig:maj_afaire}).
-			\end{itemize}
+			\end{itemize}\newpage
 			\item Si rien n'est coché, cliquez sur "\texttt{Tout sélectionner}" ou cocher uniquement les mises à jour que vous souhaitez effectuer (voir Capture d'écran \ref{fig:maj_select});
-			\begin{figure}[h]
-				\centering
-				\includegraphics[width=.6\textwidth]{include/maj_select.png}
-				\caption{Sélectionner toutes les mises à jour}
-				\label{fig:maj_select}
-			\end{figure}
 			\item Cliquez sur le bouton "\texttt{Installer les mises à jour}".
 					Votre mot de passe pourra vous être demandé, entrez-le et valider (voir Capture d'écran \ref{fig:maj_install});
 			\begin{figure}[h]
-				\centering
-				\includegraphics[width=.6\textwidth]{include/maj_install.png}
-				\caption{Installer les mises à jours}
-				\label{fig:maj_install}
+				\begin{subfigure}{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_select.png}
+					\caption{Sélectionner toutes les mises à jour}
+					\label{fig:maj_select}
+				\end{subfigure}
+				\begin{subfigure}{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{include/maj_install.png}
+					\caption{Installer les mises à jours}
+					\label{fig:maj_install}
+				\end{subfigure}
+				\caption{Effectuer les mises à jour}
+				\label{fig:majSelectInstall}
 			\end{figure}
 			\item Les mises à jour peuvent prendre du temps, ne fermez pas la fenêtre de chargement pendant ce temps.
 		\end{enumerate}
-		Félicitation ! Votre système et vos logiciels sont à jour !
+		Félicitations ! Votre système et vos logiciels sont à jour !
 
 \chapter{Utilisation du Terminal}\label{sec:terminal}%{Avancé}
 Maintenant que vous vous êtes bien familiarisés avec l'environnement de Linux Mint, que diriez-vous d'explorer des fonctions plus avancées et très pratiques que propose Linux ?\par
